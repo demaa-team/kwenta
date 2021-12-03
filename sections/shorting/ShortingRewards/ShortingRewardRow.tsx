@@ -169,7 +169,7 @@ const ShortingRewardRow: FC<ShortingRewardRowProps> = ({
 						<Currency.Icon currencyKey={currencyKey} />
 						<RewardsAmount>
 							{formatCryptoCurrency(ShortingRewardRow ?? 0, {
-								currencyKey: CRYPTO_CURRENCY_MAP.SNX,
+								currencyKey: CRYPTO_CURRENCY_MAP.DEM,
 							})}
 						</RewardsAmount>
 					</RewardsAmountContainer>
@@ -191,7 +191,7 @@ const ShortingRewardRow: FC<ShortingRewardRowProps> = ({
 					txError={txError}
 					attemptRetry={handleSubmit}
 					baseCurrencyAmount={(ShortingRewardRow ?? 0).toString()}
-					baseCurrencyKey={CRYPTO_CURRENCY_MAP.SNX}
+					baseCurrencyKey={CRYPTO_CURRENCY_MAP.DEM}
 					totalTradePrice={totalTradePrice.toString()}
 					feeCost={wei(0)}
 					txProvider="synthetix"

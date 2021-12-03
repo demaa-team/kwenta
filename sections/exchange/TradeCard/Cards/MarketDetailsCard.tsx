@@ -19,7 +19,7 @@ import { formatCurrency } from 'utils/formatters/number';
 import useSelectedPriceCurrency from 'hooks/useSelectedPriceCurrency';
 import useMarketHoursTimer from 'sections/exchange/hooks/useMarketHoursTimer';
 import { marketIsOpen, marketNextTransition } from 'utils/marketHours';
-import useSynthetixQueries from '@synthetixio/queries';
+import useSynthetixQueries from 'demaa-queries';
 import Connector from 'containers/Connector';
 
 type MarketDetailsCardProps = {
@@ -105,8 +105,7 @@ const MarketDetailsCard: FC<MarketDetailsCardProps> = ({ currencyKey, priceRate,
 					? `${formatCurrency(selectedPriceCurrency.name, rates24High, {
 							sign: selectedPriceCurrency.sign,
 							// TODO: use Synths.sKRW after Synths are corrected
-							minDecimals:
-								currencyKey === ('sKRW' as CurrencyKey) || currencyKey === Synths.sJPY ? 4 : 2,
+							minDecimals: 2,
 					  })}`
 					: NO_VALUE}
 			</Value>
@@ -158,8 +157,7 @@ const MarketDetailsCard: FC<MarketDetailsCardProps> = ({ currencyKey, priceRate,
 				{rates24Low != null
 					? `${formatCurrency(selectedPriceCurrency.name, rates24Low, {
 							sign: selectedPriceCurrency.sign,
-							minDecimals:
-								/*currencyKey === SYNTHS_MAP.sKRW || */ currencyKey === Synths.sJPY ? 4 : 2,
+							minDecimals: 2,
 					  })}`
 					: NO_VALUE}
 			</Value>

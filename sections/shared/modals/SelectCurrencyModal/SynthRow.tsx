@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import { useRecoilValue } from 'recoil';
 
-import { SynthBalance } from '@synthetixio/queries';
+import { SynthBalance } from 'demaa-queries';
 
 import { NO_VALUE } from 'constants/placeholder';
 
@@ -15,7 +15,7 @@ import useMarketClosed from 'hooks/useMarketClosed';
 import useSelectedPriceCurrency from 'hooks/useSelectedPriceCurrency';
 
 import { isWalletConnectedState } from 'store/wallet';
-import { Synth } from '@synthetixio/contracts-interface';
+import { Synth } from 'demaa-contracts-interface';
 
 type SynthRowProps = {
 	synth: Synth;

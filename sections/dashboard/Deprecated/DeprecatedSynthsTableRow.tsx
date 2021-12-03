@@ -6,7 +6,7 @@ import Wei from '@synthetixio/wei';
 import Currency from 'components/Currency';
 import ProgressBar from 'components/ProgressBar';
 
-import { SynthBalance } from '@synthetixio/queries';
+import { SynthBalance } from 'demaa-queries';
 
 import { formatPercent } from 'utils/formatters/number';
 

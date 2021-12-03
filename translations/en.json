@@ -135,11 +135,11 @@
 					"items": {
 						"qna1": {
 							"question": "Where does the liquidity come from?",
-							"answer": "Kwenta is built on the Synthetix protocol, so the Synth liquidity traders can access on Kwenta is entirely created by SNX stakers on Synthetix."
+							"answer": "Kwenta is built on the Synthetix protocol, so the Synth liquidity traders can access on Kwenta is entirely created by DEM stakers on Synthetix."
 						},
 						"qna2": {
 							"question": "How does trading work if there are no counterparties?",
-							"answer": "There are no direct counterparties for each trade in the Synthetix protocol, but it does use a counterparty-like model in which SNX stakers assume a proportion of the Synthetix debt pool when they mint sUSD. For more details, see the Synthetix <0>litepaper</0>."
+							"answer": "There are no direct counterparties for each trade in the Synthetix protocol, but it does use a counterparty-like model in which DEM stakers assume a proportion of the Synthetix debt pool when they mint sUSD. For more details, see the Synthetix <0>litepaper</0>."
 						},
 						"qna3": {
 							"question": "How are the gas costs calculated?",

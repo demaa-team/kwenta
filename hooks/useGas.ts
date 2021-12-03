@@ -2,7 +2,7 @@ import { useMemo, useCallback } from 'react';
 import { useRecoilValue } from 'recoil';
 import { BigNumber } from 'ethers';
 
-import useSynthetixQueries from '@synthetixio/queries';
+import useSynthetixQueries from 'demaa-queries';
 import { customGasPriceState, gasSpeedState } from 'store/wallet';
 import { normalizeGasLimit, gasPriceInWei } from 'utils/network';
 

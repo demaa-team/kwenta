@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { useTheme } from 'styled-components';
 import { useRecoilValue } from 'recoil';
 import { networkState, isWalletConnectedState } from 'store/wallet';
-import { NetworkId } from '@synthetixio/contracts-interface';
+import { NetworkId } from 'demaa-contracts-interface';
 
 type ConnectionDotProps = {
 	className?: string;
@@ -32,6 +32,9 @@ const ConnectionDot: React.FC<ConnectionDotProps> = (props) => {
 				break;
 			case NetworkId.Goerli:
 				background = theme.colors.goerli;
+				break;
+			case NetworkId.Mumbai:
+				background = theme.colors.mainnet;
 				break;
 			default:
 				if (network.useOvm) {

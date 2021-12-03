@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Trans, useTranslation } from 'react-i18next';
 import { CellProps } from 'react-table';
 import { Svg } from 'react-optimized-image';
-import { SynthExchangeExpanded } from '@synthetixio/data/build/node/src/types';
+import { SynthExchangeExpanded } from 'demaa-query-data/build/node/src/types';
 
 import { formatCurrency } from 'utils/formatters/number';
 

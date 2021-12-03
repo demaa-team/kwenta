@@ -48,7 +48,7 @@ import { historicalShortsPositionState } from 'store/shorts';
 
 import { SYNTHS_TO_SHORT } from '../constants';
 import TransactionNotifier from 'containers/TransactionNotifier';
-import useSynthetixQueries from '@synthetixio/queries';
+import useSynthetixQueries from 'demaa-queries';
 import Connector from 'containers/Connector';
 
 type ShortCardProps = {

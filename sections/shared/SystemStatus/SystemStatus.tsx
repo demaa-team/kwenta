@@ -25,7 +25,7 @@ import GithubIcon from 'assets/svg/social/github.svg';
 
 import { useRecoilValue } from 'recoil';
 import { isL2State } from 'store/wallet';
-import useSynthetixQueries from '@synthetixio/queries';
+import useSynthetixQueries from 'demaa-queries';
 
 type SystemStatusProps = {
 	children: React.ReactNode;

@@ -16,7 +16,7 @@ import NumericInput from 'components/Input/NumericInput';
 import { numericValueCSS, NumericValue, FlexDivRowCentered, FlexDivCol } from 'styles/common';
 
 import { formatPercent } from 'utils/formatters/number';
-import { GasPrices, GAS_SPEEDS } from '@synthetixio/queries';
+import { GasPrices, GAS_SPEEDS } from 'demaa-queries';
 import Wei from '@synthetixio/wei';
 
 type TradeBalancerSummaryCardProps = {

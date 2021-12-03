@@ -5,7 +5,7 @@ import media from 'styles/media';
 import { GridDivCentered } from 'styles/common';
 
 import SynthBalanceRow, { SynthBalanceRowProps } from './SynthBalanceRow';
-import { SynthBalance } from '@synthetixio/queries';
+import { SynthBalance } from 'demaa-queries';
 import NoSynthsCard from 'sections/exchange/FooterCard/NoSynthsCard';
 
 type SynthBalancesProps = Omit<SynthBalanceRowProps, 'synth'> & {

@@ -26,7 +26,7 @@ import 'tippy.js/dist/tippy.css';
 import '../i18n';
 
 import Layout from 'sections/shared/Layout';
-import { createQueryContext, SynthetixQueryContextProvider } from '@synthetixio/queries';
+import { createQueryContext, SynthetixQueryContextProvider } from 'demaa-queries';
 import Connector from 'containers/Connector';
 
 const InnerApp: FC<AppProps> = ({ Component, pageProps }) => {

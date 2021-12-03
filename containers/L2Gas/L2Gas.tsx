@@ -3,7 +3,7 @@ import { createContainer } from 'unstated-next';
 import { useRecoilValue } from 'recoil';
 import Connector from 'containers/Connector';
 import { networkState, isL2State, walletAddressState } from 'store/wallet';
-import { Network } from '@synthetixio/contracts-interface';
+import { Network } from 'demaa-contracts-interface';
 import { makeContract as makeL2WETHContract } from 'contracts/L2WETH';
 import { wei } from '@synthetixio/wei';
 

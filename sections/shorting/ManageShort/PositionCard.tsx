@@ -37,7 +37,7 @@ import { NO_VALUE } from 'constants/placeholder';
 
 import { ShortingTab } from './constants';
 import { MIN_COLLATERAL_RATIO } from '../constants';
-import useSynthetixQueries from '@synthetixio/queries';
+import useSynthetixQueries from 'demaa-queries';
 import { wei } from '@synthetixio/wei';
 
 type PositionCardProps = {

@@ -1,6 +1,6 @@
 import { FC, useState, useMemo, useCallback } from 'react';
 import styled from 'styled-components';
-import { Synth } from '@synthetixio/contracts-interface';
+import { Synth } from 'demaa-contracts-interface';
 import { useTranslation } from 'react-i18next';
 import isAfter from 'date-fns/isAfter';
 import sub from 'date-fns/sub';

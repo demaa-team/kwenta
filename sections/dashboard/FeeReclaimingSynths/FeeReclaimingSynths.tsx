@@ -1,8 +1,8 @@
 import { FC, useMemo } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
-import useSynthetixQueries from '@synthetixio/queries';
-import { CurrencyKey } from '@synthetixio/contracts-interface';
+import useSynthetixQueries from 'demaa-queries';
+import { CurrencyKey } from 'demaa-contracts-interface';
 import { useRecoilValue } from 'recoil';
 
 import { walletAddressState } from 'store/wallet';

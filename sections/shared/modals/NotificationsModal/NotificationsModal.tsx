@@ -1,7 +1,7 @@
 import { FC, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useRecoilValue } from 'recoil';
-import useSynthetixQueries from '@synthetixio/queries';
+import useSynthetixQueries from 'demaa-queries';
 
 import { walletAddressState } from 'store/wallet';
 import { ordersByStatusState } from 'store/orders';

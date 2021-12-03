@@ -145,10 +145,7 @@ const ChartCard: FC<ChartCardProps> = ({
 									{formatCurrency(selectedPriceCurrency.name, price, {
 										sign: selectedPriceCurrency.sign,
 										// @TODO: each currency key should specify how many decimals to show
-										minDecimals:
-											currencyKey === ('sKRW' as CurrencyKey) || currencyKey === Synths.sJPY
-												? 4
-												: 2,
+										minDecimals: 2,
 									})}
 								</CurrencyPrice>
 							)}

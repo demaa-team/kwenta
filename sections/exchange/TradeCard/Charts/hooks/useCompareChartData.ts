@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import orderBy from 'lodash/orderBy';
-import useSynthetixQueries from '@synthetixio/queries';
+import useSynthetixQueries from 'demaa-queries';
 
 import usePeriodStartSynthRateQuery from 'queries/rates/usePeriodStartSynthRateQuery';
 import { CurrencyKey, Synths } from 'constants/currency';

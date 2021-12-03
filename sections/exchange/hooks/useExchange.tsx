@@ -82,9 +82,9 @@ import L2Gas from 'containers/L2Gas';
 
 import { NoTextTransform } from 'styles/common';
 import useZapperTokenList from 'queries/tokenLists/useZapperTokenList';
-import { GasPrices } from '@synthetixio/queries';
+import { GasPrices } from 'demaa-queries';
 
-import useSynthetixQueries from '@synthetixio/queries';
+import useSynthetixQueries from 'demaa-queries';
 import { wei } from '@synthetixio/wei';
 import Connector from 'containers/Connector';
 
@@ -1114,7 +1114,7 @@ const useExchange = ({
 					feeRate={exchangeFeeRate}
 					transactionFee={transactionFee}
 					feeCost={feeCost}
-					// show fee's only for "synthetix" (provider)
+					// show fee's only for "synthetix-demaa" (provider)
 					showFee={txProvider === 'synthetix' ? true : false}
 					isApproved={needsApproval ? isApproved : undefined}
 					show1InchProvider={txProvider === '1inch'}

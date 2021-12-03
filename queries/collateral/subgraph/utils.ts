@@ -6,8 +6,7 @@ import { wei } from '@synthetixio/wei';
 // MainNet - 'https://api.thegraph.com/subgraphs/name/synthetixio-team/synthetix-shorts';
 // Kovan - 'https://api.thegraph.com/subgraphs/name/vbstreetz/synthetix-shorts-kovan'
 
-export const SHORT_GRAPH_ENDPOINT =
-	'https://api.thegraph.com/subgraphs/name/synthetixio-team/synthetix-shorts';
+export const SHORT_GRAPH_ENDPOINT = 'https://api.thegraph.com/subgraphs/name/demaa-team/shorts';
 
 export const SHORT_GRAPH_ENDPOINT_KOVAN =
 	'https://api.thegraph.com/subgraphs/name/vbstreetz/synthetix-shorts-kovan';

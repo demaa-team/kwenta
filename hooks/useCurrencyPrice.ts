@@ -1,6 +1,6 @@
 import { useRecoilValue } from 'recoil';
 
-import useSynthetixQueries from '@synthetixio/queries';
+import useSynthetixQueries from 'demaa-queries';
 import { CurrencyKey } from 'constants/currency';
 import { priceCurrencyState } from 'store/app';
 import { zeroBN } from 'utils/formatters/number';

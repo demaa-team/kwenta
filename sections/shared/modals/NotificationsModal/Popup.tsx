@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { UseQueryResult } from 'react-query';
 import styled from 'styled-components';
-import { DeprecatedSynthsBalances, SynthFeeAndWaitingPeriod } from '@synthetixio/queries';
+import { DeprecatedSynthsBalances, SynthFeeAndWaitingPeriod } from 'demaa-queries';
 
 import { TextButton } from 'styles/common';
 

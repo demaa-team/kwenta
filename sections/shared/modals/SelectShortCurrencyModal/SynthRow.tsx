@@ -2,7 +2,7 @@ import { FC } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 
-import { Synth } from '@synthetixio/contracts-interface';
+import { Synth } from 'demaa-contracts-interface';
 
 import Currency from 'components/Currency';
 
@@ -12,7 +12,7 @@ import { SelectableCurrencyRow } from 'styles/common';
 import { Period } from 'constants/period';
 import useMarketClosed from 'hooks/useMarketClosed';
 import useSelectedPriceCurrency from 'hooks/useSelectedPriceCurrency';
-import useSynthetixQueries from '@synthetixio/queries';
+import useSynthetixQueries from 'demaa-queries';
 import { CurrencyKey } from 'constants/currency';
 
 type SynthRowProps = {

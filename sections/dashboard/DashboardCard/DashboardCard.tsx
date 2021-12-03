@@ -23,7 +23,7 @@ import FeeReclaimingSynths from '../FeeReclaimingSynths';
 
 import useSelectedPriceCurrency from 'hooks/useSelectedPriceCurrency';
 import { isL2State } from 'store/wallet';
-import useSynthetixQueries from '@synthetixio/queries';
+import useSynthetixQueries from 'demaa-queries';
 import { walletAddressState } from 'store/wallet';
 import { useRecoilValue } from 'recoil';
 import { CurrencyKey } from 'constants/currency';

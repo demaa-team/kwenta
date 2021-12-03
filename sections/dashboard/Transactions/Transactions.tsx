@@ -2,9 +2,9 @@ import { FC, useState, useMemo, useCallback } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import { CATEGORY_MAP } from 'constants/currency';
-import useSynthetixQueries from '@synthetixio/queries';
-import { Synth } from '@synthetixio/contracts-interface';
-import { SynthExchangeExpanded } from '@synthetixio/data/build/node/src/types';
+import useSynthetixQueries from 'demaa-queries';
+import { Synth } from 'demaa-contracts-interface';
+import { SynthExchangeExpanded } from 'demaa-query-data/build/node/src/types';
 import { useRecoilValue } from 'recoil';
 
 import Select from 'components/Select';

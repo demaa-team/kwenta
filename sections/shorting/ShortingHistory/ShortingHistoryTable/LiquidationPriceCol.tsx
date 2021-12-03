@@ -12,7 +12,7 @@ import { formatCurrency } from 'utils/formatters/number';
 import { MIN_COLLATERAL_RATIO } from 'sections/shorting/constants';
 
 import { StyledCurrencyKey, StyledPrice } from './common';
-import useSynthetixQueries from '@synthetixio/queries';
+import useSynthetixQueries from 'demaa-queries';
 import { wei } from '@synthetixio/wei';
 
 type LiquidationPriceColType = {

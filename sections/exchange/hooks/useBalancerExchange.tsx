@@ -6,7 +6,7 @@ import get from 'lodash/get';
 import produce from 'immer';
 import { SOR } from '@balancer-labs/sor';
 import { BigNumber } from 'bignumber.js';
-import { NetworkId } from '@synthetixio/contracts-interface';
+import { NetworkId } from 'demaa-contracts-interface';
 import { useTranslation } from 'react-i18next';
 import { Svg } from 'react-optimized-image';
 
@@ -41,8 +41,8 @@ import { zeroBN, scale } from 'utils/formatters/number';
 
 import balancerExchangeProxyABI from './balancerExchangeProxyABI';
 import TransactionNotifier from 'containers/TransactionNotifier';
-import { GasPrices } from '@synthetixio/queries';
-import useSynthetixQueries from '@synthetixio/queries';
+import { GasPrices } from 'demaa-queries';
+import useSynthetixQueries from 'demaa-queries';
 import Wei, { wei } from '@synthetixio/wei';
 
 type ExchangeCardProps = {

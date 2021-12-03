@@ -1,4 +1,4 @@
-import useSynthetixQueries from '@synthetixio/queries';
+import useSynthetixQueries from 'demaa-queries';
 import { CurrencyKey } from 'constants/currency';
 import { PeriodLabel } from 'constants/period';
 

@@ -1,7 +1,7 @@
 // Vendor
 import { FC, useContext, useState } from 'react';
 import { BarChart, XAxis, YAxis, Bar, Cell, Tooltip } from 'recharts';
-import { Synth } from '@synthetixio/contracts-interface';
+import { Synth } from 'demaa-contracts-interface';
 import { ThemeContext } from 'styled-components';
 import { formatEther } from '@ethersproject/units';
 import isNull from 'lodash/isNull';

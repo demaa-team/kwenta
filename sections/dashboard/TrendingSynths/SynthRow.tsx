@@ -12,8 +12,8 @@ import ROUTES from 'constants/routes';
 import { SelectableCurrencyRow } from 'styles/common';
 import useMarketClosed from 'hooks/useMarketClosed';
 import useSelectedPriceCurrency from 'hooks/useSelectedPriceCurrency';
-import useSynthetixQueries from '@synthetixio/queries';
-import { Synth } from '@synthetixio/contracts-interface';
+import useSynthetixQueries from 'demaa-queries';
+import { Synth } from 'demaa-contracts-interface';
 import { CurrencyKey } from 'constants/currency';
 
 type SynthRowProps = {

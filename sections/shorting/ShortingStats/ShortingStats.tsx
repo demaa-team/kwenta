@@ -19,7 +19,7 @@ import { formatCurrency, zeroBN } from 'utils/formatters/number';
 
 import { SYNTHS_TO_SHORT } from '../constants';
 import { Title } from '../common';
-import useSynthetixQueries from '@synthetixio/queries';
+import useSynthetixQueries from 'demaa-queries';
 import { wei } from '@synthetixio/wei';
 
 const SECONDS_IN_A_YR = 365 * 24 * 60 * 60;
@@ -44,7 +44,7 @@ const ShortingStats = () => {
 	const shortStatsMap = useMemo(() => {
 		if (shortStats != null && exchangeRates != null && selectPriceCurrencyRate != null) {
 			return mapValues(shortStats, ({ shorts, rewardsRate, rewardsTotalSupply }, currencyKey) => {
-				const snxUSDPrice = exchangeRates[CRYPTO_CURRENCY_MAP.SNX];
+				const snxUSDPrice = exchangeRates[CRYPTO_CURRENCY_MAP.DEM];
 				const assetUSDPrice = exchangeRates[currencyKey];
 
 				const openInterest = shorts.mul(assetUSDPrice).div(selectPriceCurrencyRate);

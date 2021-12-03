@@ -23,9 +23,9 @@ import GasPriceSummaryItem from './GasPriceSummaryItem';
 import TotalTradePriceSummaryItem from './TotalTradePriceSummaryItem';
 import FeeRateSummaryItem from './FeeRateSummaryItem';
 import FeeCostSummaryItem from './FeeCostSummaryItem';
-import { GasPrices } from '@synthetixio/queries';
+import { GasPrices } from 'demaa-queries';
 import PoweredBy1Inch from 'components/PoweredBy1Inch';
-import { Synth } from '@synthetixio/contracts-interface';
+import { Synth } from 'demaa-contracts-interface';
 
 type TradeSummaryCardProps = {
 	submissionDisabledReason: ReactNode;

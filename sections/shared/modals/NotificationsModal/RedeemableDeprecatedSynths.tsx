@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { UseQueryResult } from 'react-query';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
-import { DeprecatedSynthsBalances } from '@synthetixio/queries';
+import { DeprecatedSynthsBalances } from 'demaa-queries';
 import { wei } from '@synthetixio/wei';
 
 import { Synths } from 'constants/currency';

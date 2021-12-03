@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
-import { DeprecatedSynthBalance } from '@synthetixio/queries';
+import { DeprecatedSynthBalance } from 'demaa-queries';
 import Wei, { wei } from '@synthetixio/wei';
 
 import { FlexDivColCentered } from 'styles/common';

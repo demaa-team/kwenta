@@ -71,7 +71,7 @@ const CurrencyIcon: FC<CurrencyIconProps> = ({ currencyKey, type, isDeprecated, 
 			case CRYPTO_CURRENCY_MAP.ETH: {
 				return <Img src={ETHIcon} {...props} />;
 			}
-			case CRYPTO_CURRENCY_MAP.SNX: {
+			case CRYPTO_CURRENCY_MAP.DEM: {
 				return <img src={SNXIcon} {...props} alt="snx-icon" />;
 			}
 			default:

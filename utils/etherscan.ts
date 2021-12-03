@@ -1,9 +1,11 @@
-import { NetworkId } from '@synthetixio/contracts-interface';
+import { NetworkId } from 'demaa-contracts-interface';
 import { Network } from 'store/wallet';
 
 const getEtherscanBaseURL = (network: Network) => {
 	if (network.id === NetworkId.Mainnet) {
 		return 'https://etherscan.io';
+	} else if (network.id === NetworkId.Mumbai) {
+		return 'https://mumbai.polygonscan.com';
 	}
 	return `https://${network.name}.etherscan.io`;
 };

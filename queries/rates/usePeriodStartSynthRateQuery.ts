@@ -1,5 +1,5 @@
 import { useQuery, UseQueryOptions } from 'react-query';
-import snxData from 'synthetix-data';
+import snxData from 'demaa-data';
 
 import QUERY_KEYS from 'constants/queryKeys';
 import { CurrencyKey, Synths } from 'constants/currency';

@@ -32,7 +32,7 @@ import Connector from 'containers/Connector';
 import { RowsHeader, RowsContainer, CenteredModal } from '../common';
 
 import TokenRow from './TokenRow';
-import useSynthetixQueries from '@synthetixio/queries';
+import useSynthetixQueries from 'demaa-queries';
 import { omitBy } from 'lodash';
 
 type SelectTokenModalProps = {

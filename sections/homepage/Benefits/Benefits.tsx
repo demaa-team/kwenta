@@ -44,7 +44,7 @@ const Benefits = () => {
 	const { quoteCurrencyCard, baseCurrencyCard, footerCard } = useExchange({
 		footerCardAttached: true,
 		persistSelectedCurrencies: false,
-		defaultQuoteCurrencyKey: Synths.sBTC,
+		defaultQuoteCurrencyKey: Synths.sETH,
 		defaultBaseCurrencyKey: Synths.sETH,
 	});
 

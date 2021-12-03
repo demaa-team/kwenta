@@ -5,7 +5,7 @@ import { DEFAULT_LANGUAGE, DEFAULT_PRICE_CURRENCY } from 'constants/defaults';
 import { Period } from 'constants/period';
 import { Synths } from 'constants/currency';
 
-import { Synth } from '@synthetixio/contracts-interface';
+import { Synth } from 'demaa-contracts-interface';
 
 import { getAppKey } from '../utils';
 
@@ -21,16 +21,7 @@ import {
 } from './constants';
 import { ChartType } from 'constants/chartType';
 
-export const PRICE_CURRENCIES = [
-	Synths.sUSD,
-	Synths.sEUR,
-	Synths.sCHF,
-	Synths.sAUD,
-	Synths.sJPY,
-	Synths.sGBP,
-	Synths.sBTC,
-	Synths.sETH,
-];
+export const PRICE_CURRENCIES = [Synths.sUSD, Synths.sETH];
 
 export const appReadyState = atom<boolean>({
 	key: getAppKey('appReady'),

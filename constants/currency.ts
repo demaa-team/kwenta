@@ -1,11 +1,11 @@
-import { CurrencyKey } from '@synthetixio/contracts-interface';
+import { CurrencyKey } from 'demaa-contracts-interface';
 import keyBy from 'lodash/keyBy';
 
-import { Synths } from '@synthetixio/contracts-interface';
+import { Synths } from 'demaa-contracts-interface';
 import Wei from '@synthetixio/wei';
 
-export type { CurrencyKey } from '@synthetixio/contracts-interface';
-export { Synths } from '@synthetixio/contracts-interface';
+export type { CurrencyKey } from 'demaa-contracts-interface';
+export { Synths } from 'demaa-contracts-interface';
 
 // TODO: standardize this
 export type Category = 'crypto' | 'forex' | 'equities' | 'index' | 'commodity' | 'inverse';
@@ -25,7 +25,7 @@ export const CRYPTO_CURRENCY = [
 	'COMP',
 	'REN',
 	'LEND',
-	'SNX',
+	'DEM',
 	'BTC',
 	'ETH',
 	'XRP',
@@ -44,14 +44,7 @@ export const CRYPTO_CURRENCY = [
 
 export const CRYPTO_CURRENCY_MAP = keyBy(CRYPTO_CURRENCY);
 
-export const FIAT_SYNTHS: Set<CurrencyKey> = new Set([
-	Synths.sEUR,
-	Synths.sJPY,
-	Synths.sUSD,
-	Synths.sAUD,
-	Synths.sGBP,
-	Synths.sCHF,
-]);
+export const FIAT_SYNTHS: Set<CurrencyKey> = new Set([Synths.sUSD]);
 
 export const LSE_SYNTHS = new Set<CurrencyKey>([]);
 

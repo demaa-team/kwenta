@@ -17,7 +17,7 @@ import { DEFAULT_SEARCH_DEBOUNCE_MS } from 'constants/defaults';
 import { RowsHeader, RowsContainer, CenteredModal } from '../common';
 
 import SynthRow from './SynthRow';
-import useSynthetixQueries from '@synthetixio/queries';
+import useSynthetixQueries from 'demaa-queries';
 import { walletAddressState } from 'store/wallet';
 import { useRecoilValue } from 'recoil';
 import Connector from 'containers/Connector';

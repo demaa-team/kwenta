@@ -5,7 +5,7 @@ import Wei from '@synthetixio/wei';
 
 import Button from 'components/Button';
 
-import useSynthetixQueries from '@synthetixio/queries';
+import useSynthetixQueries from 'demaa-queries';
 
 import media from 'styles/media';
 

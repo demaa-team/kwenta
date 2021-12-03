@@ -1,4 +1,4 @@
-import useSynthetixQueries from '@synthetixio/queries';
+import useSynthetixQueries from 'demaa-queries';
 import Wei from '@synthetixio/wei';
 
 import { useRecoilValue } from 'recoil';

@@ -1,4 +1,4 @@
-import { NetworkId } from '@synthetixio/contracts-interface';
+import { NetworkId } from 'demaa-contracts-interface';
 
 export default {
 	addresses: {

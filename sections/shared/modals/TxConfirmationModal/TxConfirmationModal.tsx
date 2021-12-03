@@ -29,8 +29,8 @@ import useCurrencyPrice from 'hooks/useCurrencyPrice';
 import { ESTIMATE_VALUE } from 'constants/placeholder';
 import { Svg } from 'react-optimized-image';
 import InfoIcon from 'assets/svg/app/info.svg';
-import { CurrencyKey } from '@synthetixio/contracts-interface';
-import useSynthetixQueries from '@synthetixio/queries';
+import { CurrencyKey } from 'demaa-contracts-interface';
+import useSynthetixQueries from 'demaa-queries';
 
 export type TxProvider = 'synthetix' | '1inch' | 'balancer';
 

@@ -13,7 +13,7 @@ import {
 	Network as NetworkName,
 	SynthetixJS,
 	synthetix,
-} from '@synthetixio/contracts-interface';
+} from 'demaa-contracts-interface';
 import { ethers } from 'ethers';
 
 import { ordersState } from 'store/orders';

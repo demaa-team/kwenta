@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import { Svg } from 'react-optimized-image';
 import Tippy from '@tippyjs/react';
 import { differenceInMinutes } from 'date-fns';
-import useSynthetixQueries from '@synthetixio/queries';
-import { SynthExchangeExpanded } from '@synthetixio/data/build/node/src/types';
+import useSynthetixQueries from 'demaa-queries';
+import { SynthExchangeExpanded } from 'demaa-query-data/build/node/src/types';
 import { useRecoilValue } from 'recoil';
 
 import { walletAddressState } from 'store/wallet';

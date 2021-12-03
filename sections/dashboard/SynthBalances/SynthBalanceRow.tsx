@@ -8,7 +8,7 @@ import ProgressBar from 'components/ProgressBar';
 
 import { Period } from 'constants/period';
 
-import useSynthetixQueries, { Rates, SynthBalance } from '@synthetixio/queries';
+import useSynthetixQueries, { Rates, SynthBalance } from 'demaa-queries';
 
 import { formatPercent } from 'utils/formatters/number';
 

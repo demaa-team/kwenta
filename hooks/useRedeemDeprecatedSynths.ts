@@ -1,7 +1,7 @@
 import { useState, useMemo, useCallback, useEffect } from 'react';
 import { useRecoilValue } from 'recoil';
 import { useTranslation } from 'react-i18next';
-import useSynthetixQueries, { DeprecatedSynthsBalances } from '@synthetixio/queries';
+import useSynthetixQueries, { DeprecatedSynthsBalances } from 'demaa-queries';
 import { ethers } from 'ethers';
 
 import { Synths } from 'constants/currency';

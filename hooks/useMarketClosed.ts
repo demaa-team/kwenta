@@ -1,7 +1,7 @@
-import useSynthetixQueries from '@synthetixio/queries';
+import useSynthetixQueries from 'demaa-queries';
 import { CurrencyKey } from 'constants/currency';
 
-import { SynthSuspensionReason } from '@synthetixio/queries';
+import { SynthSuspensionReason } from 'demaa-queries';
 
 export type MarketClosureReason = 'frozen' | SynthSuspensionReason;
 export type MarketClosure = ReturnType<typeof useMarketClosed>;

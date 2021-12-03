@@ -64,7 +64,7 @@ import TotalTradePriceSummaryItem from 'sections/exchange/FooterCard/TradeSummar
 
 import { ShortingTab } from './constants';
 import TransactionNotifier from 'containers/TransactionNotifier';
-import useSynthetixQueries from '@synthetixio/queries';
+import useSynthetixQueries from 'demaa-queries';
 import { wei } from '@synthetixio/wei';
 
 type ManageShortActionProps = {

@@ -17,7 +17,7 @@ import { getTransactionPrice } from 'utils/network';
 import GasPriceSummaryItem from 'sections/exchange/FooterCard/TradeSummaryCard/GasPriceSummaryItem';
 
 import { Title } from '../common';
-import useSynthetixQueries from '@synthetixio/queries';
+import useSynthetixQueries from 'demaa-queries';
 
 const ShortingRewards: FC = () => {
 	const { t } = useTranslation();
