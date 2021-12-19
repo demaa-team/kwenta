@@ -23,10 +23,10 @@ const Header: FC = () => {
 	return (
 		<Container isL2={isL2}>
 			<MobileHiddenView>
-				<LogoNav>
+				{/* <LogoNav>
 					{logo}
 					<Nav />
-				</LogoNav>
+				</LogoNav> */}
 				<UserMenu />
 			</MobileHiddenView>
 			<MobileOnlyView>
@@ -36,13 +36,14 @@ const Header: FC = () => {
 		</Container>
 	);
 };
-
-const Container = styled.header<{ isL2: boolean }>`
-	position: absolute;
+/* position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
-	z-index: ${zIndex.HEADER};
+	z-index: ${zIndex.HEADER}; */
+const Container = styled.header<{ isL2: boolean }>`
+	border-bottom: 2px solid #000D56;
+	height: 70px;
 	${media.lessThan('md')`
 		position: fixed;
 		background-color: ${(props) => props.theme.colors.black};
@@ -56,7 +57,7 @@ const Container = styled.header<{ isL2: boolean }>`
 		line-height: ${HEADER_HEIGHT};
 		padding: 0 20px;
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-end;
 		align-items: center;
 	}
 `;

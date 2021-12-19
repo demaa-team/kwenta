@@ -29,7 +29,8 @@ const Container = styled.div<{ isRounded?: boolean }>`
 	background-color: ${(props) => props.theme.colors.elderberry};
 	display: flex;
 	flex-direction: column;
-	border-radius: ${(props) => (props.isRounded ? '100px' : '4px')};
+	align-items: center;
+	/* border-radius: ${(props) => (props.isRounded ? '100px' : '4px')}; */
 `;
 
 export default Card;

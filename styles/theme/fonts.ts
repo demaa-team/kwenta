@@ -1,6 +1,6 @@
 const fontStyles = {
 	regular: `AkkuratLLWeb-Regular`,
-	bold: `AkkuratLLWeb-Bold`,
+	bold: `Microsoft YaHei,AkkuratLLWeb-Bold`,
 	mono: `AkkuratMonoLLWeb-Regular`,
 };
 

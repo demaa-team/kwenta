@@ -52,16 +52,16 @@ export const MessageContainer = styled(GridDivCentered)<{
 	attached?: boolean;
 	showProvider?: boolean;
 }>`
-	display: grid;
-	-webkit-box-align: center;
+	display: flex;
+	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 	width: 100%;
-	border-radius: 4px;
 	grid-template-columns: ${(props) => props.showProvider && '.5fr'} 1fr auto;
 	background-color: ${(props) => props.theme.colors.elderberry};
-	padding: 16px 32px;
-	margin: 0 0 20px;
-
+	/* padding: 16px 32px;
+	margin: 0 0 20px; */
+	height: 346px;
 	/*
 	width: 100%;
 	border-radius: 1000px;
@@ -91,7 +91,7 @@ export const FixedMessageContainerSpacer = styled.div`
 
 export const Message = styled.div`
 	color: ${(props) => props.theme.colors.white};
-	font-size: 14px;
+	font-size: 24px;
 	font-family: ${(props) => props.theme.fonts.bold};
 	flex-grow: 1;
 	text-align: center;
@@ -101,4 +101,7 @@ export const MessageButton = styled(Button).attrs({
 	variant: 'primary',
 	size: 'lg',
 	isRounded: true,
-})``;
+})`
+	margin-top: 38px;
+	font-size: 24px;
+`;

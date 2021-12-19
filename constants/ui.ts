@@ -1,5 +1,5 @@
-export const HEADER_HEIGHT = '45px';
-export const SPACING_FROM_HEADER = '80px';
+export const HEADER_HEIGHT = '70px';
+export const SPACING_FROM_HEADER = '24px';
 
 export enum zIndex {
 	BASE = 1,

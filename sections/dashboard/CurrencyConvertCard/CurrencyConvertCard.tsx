@@ -40,7 +40,9 @@ const Container = styled.div`
 `;
 
 const StyledCurrencyCardsSelector = styled(CurrencyCardsSelector)`
-	width: 80px;
+	max-width: 260px;
+	width: 18%;
+	height: 150px;
 `;
 
 export const ExchangeFooter = styled.div`

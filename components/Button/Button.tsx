@@ -44,8 +44,8 @@ const Button = styled.button<ButtonProps>`
 		props.size === 'lg' &&
 		css`
 			padding: 0 40px;
-			height: 40px;
-			line-height: 40px;
+			height: 50px;
+			line-height: 50px;
 		`}		
 
 

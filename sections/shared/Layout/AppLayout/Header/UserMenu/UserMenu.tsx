@@ -2,7 +2,7 @@ import { FC, useState, useMemo } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import { useRecoilState, useRecoilValue } from 'recoil';
-import { Svg } from 'react-optimized-image';
+import Img,{ Svg } from 'react-optimized-image';
 import useSynthetixQueries from 'demaa-queries';
 
 import Connector from 'containers/Connector';
@@ -20,6 +20,8 @@ import { FlexDivCentered, resetButtonCSS } from 'styles/common';
 import NotificationIcon from 'assets/svg/app/notification.svg';
 import NotificationAlertIcon from 'assets/svg/app/notification-alert.svg';
 import MenuIcon from 'assets/svg/app/menu.svg';
+import MenuSettingIcon from 'assets/png/dashboard/set.png';
+
 
 import WalletOptionsModal from 'sections/shared/modals/WalletOptionsModal';
 import NotificationsModal from 'sections/shared/modals/NotificationsModal';
@@ -80,6 +82,28 @@ const UserMenu: FC<UserMenuProps> = ({ isTextButton }) => {
 								)}
 							</MenuButton>
 						)}
+
+						{isWalletConnected ? (
+							<WalletButton
+								size="md"
+								variant="outline"
+								onClick={() => setWalletOptionsModalOpened(true)}
+								data-testid="wallet-btn"
+							>
+								<StyledConnectionDot />
+								{truncatedWalletAddress}
+							</WalletButton>
+						) : (
+							<Button
+								variant={isTextButton ? 'text' : 'primary'}
+								onClick={connectWallet}
+								data-testid="connect-wallet"
+								className='walletBtn'
+							>
+								{t('common.wallet.connect-wallet')}
+							</Button>
+						)}
+
 						<MenuButton
 							onClick={() => {
 								setSettingsModalOpened(!settingsModalOpened);
@@ -87,28 +111,10 @@ const UserMenu: FC<UserMenuProps> = ({ isTextButton }) => {
 							}}
 							isActive={settingsModalOpened}
 						>
-							<Svg src={MenuIcon} />
+							<Img src={MenuSettingIcon} sizes={[32]}/>
 						</MenuButton>
 					</Menu>
-					{isWalletConnected ? (
-						<WalletButton
-							size="md"
-							variant="outline"
-							onClick={() => setWalletOptionsModalOpened(true)}
-							data-testid="wallet-btn"
-						>
-							<StyledConnectionDot />
-							{truncatedWalletAddress}
-						</WalletButton>
-					) : (
-						<Button
-							variant={isTextButton ? 'text' : 'primary'}
-							onClick={connectWallet}
-							data-testid="connect-wallet"
-						>
-							{t('common.wallet.connect-wallet')}
-						</Button>
-					)}
+					
 				</FlexDivCentered>
 			</Container>
 			{walletOptionsModalOpened && (
@@ -127,8 +133,12 @@ const Container = styled.div``;
 const Menu = styled.div`
 	padding-right: 16px;
 	display: grid;
-	grid-gap: 10px;
+	grid-gap: 22px;
 	grid-auto-flow: column;
+	align-items:center;
+	.walletBtn{
+		border-radius: 20px;
+	}
 `;
 
 const WalletButton = styled(Button)`

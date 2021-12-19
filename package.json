@@ -2,7 +2,7 @@
 	"name": "kwenta",
 	"version": "2.45.2",
 	"scripts": {
-		"dev": "next",
+		"dev": "next -p 3002",
 		"build": "next build",
 		"start": "next start",
 		"export": "next export",

@@ -19,18 +19,23 @@ const Onboard: FC = () => {
 	return (
 		<>
 			<FlexDivCol>
-				<Title>{t('dashboard.onboard.title')}</Title>
-				<Subtitle>{t('dashboard.onboard.subtitle')}</Subtitle>
-				<Center>
-					<Button
-						variant="primary"
-						isRounded={true}
-						size="lg"
-						onClick={() => setHowItWorksModalOpened(true)}
-					>
-						{t('dashboard.onboard.learn-more')}
-					</Button>
-				</Center>
+				<WrapperFlexDivCol>
+					<Title>{t('dashboard.onboard.title')}</Title>
+					<Subtitle>{t('dashboard.onboard.subtitle')}</Subtitle>
+					<Center>
+						<Button
+							variant="primary"
+							isRounded={true}
+							size="lg"
+							onClick={() => setHowItWorksModalOpened(true)}
+							className='learnMoreBtn'
+						>
+							{t('dashboard.onboard.learn-more')}
+						</Button>
+					</Center>
+				</WrapperFlexDivCol>
+				
+
 				<ConvertContainer>
 					<StyledCardTitle>{t('dashboard.onboard.convert')}</StyledCardTitle>
 					<CurrencyConvertCard />
@@ -45,30 +50,42 @@ const Onboard: FC = () => {
 
 const Title = styled.div`
 	font-family: ${(props) => props.theme.fonts.bold};
-	color: ${(props) => props.theme.colors.blueberry};
-	text-transform: uppercase;
-	text-align: center;
-	padding-bottom: 8px;
+	color: ${(props) => props.theme.colors.white};
+	/* text-transform: uppercase; */
+	font-size: 16px;
+	text-align: left;
+	padding-bottom: 90px;
 `;
 
 const Subtitle = styled.div`
 	font-family: ${(props) => props.theme.fonts.bold};
-	font-size: 20px;
-	line-height: 24px;
+	font-size: 26px;
+	/* line-height: 24px; */
 	color: ${(props) => props.theme.colors.white};
 	text-align: center;
-	margin-bottom: 33px;
+	margin-bottom: 45px;
 `;
 
 export const Center = styled.div`
 	margin: 0 auto;
-	margin-bottom: 100px;
+	/* margin-bottom: 100px; */
 `;
 
 const StyledCardTitle = styled(CardTitle)`
-	padding-bottom: 5px;
-	border-bottom: 1px solid ${(props) => props.theme.colors.navy};
+	/* border-bottom: 1px solid ${(props) => props.theme.colors.navy}; */
+	padding: 20px 30px;
 	margin-bottom: 24px;
 `;
+
+const WrapperFlexDivCol=styled(FlexDivCol)`
+	background: #203298;
+	border-radius: 22px;
+	padding: 20px 30px 36px;
+	margin-bottom: 16px;
+	.learnMoreBtn{
+		font-size: 24px;
+		height:50px;
+	}
+`
 
 export default Onboard;

@@ -151,7 +151,7 @@ export const AbsoluteCenteredDiv = styled.div`
 export const PageContent = styled.section`
 	position: relative;
 	margin: 0 auto;
-	padding: 0 20px;
+	padding: 24px;
 	width: 100%;
 	flex-grow: 1;
 	${(props) => props.theme.animations.show};
@@ -292,7 +292,7 @@ export const MainContent = styled(FlexDivCol)`
 	max-width: 1000px;
 	position: relative;
 	overflow: auto;
-	margin: ${SPACING_FROM_HEADER} auto 0 auto;
+	/* margin: ${SPACING_FROM_HEADER} auto 0 auto; */
 `;
 
 export const RightSideContent = styled(FlexDivCol)`
@@ -317,13 +317,17 @@ export const Table = styled.table.attrs({
 
 export const CurrencyCardsSelector = styled.div`
 	position: absolute;
-	padding: 6px;
-	border-radius: 4px;
-	background: ${(props) => props.theme.colors.elderberry};
-	border: 2px solid ${(props) => props.theme.colors.black};
+	/* padding: 6px; */
+	/* border-radius: 4px; */
+	/* background: ${(props) => props.theme.colors.elderberry}; */
+	border-left: 2px solid ${(props) => props.theme.colors.black};
+	border-right: 2px solid ${(props) => props.theme.colors.black};
 	left: 50%;
-	top: 50%;
+	top: 28%;
 	transform: translate(-50%, -50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
 	${media.lessThan('md')`
 		margin-top: -14px;
@@ -339,14 +343,16 @@ export const DropdownSelection = styled.span.attrs({
 	display: inline-flex;
 	align-items: center;
 	font-family: ${(props) => props.theme.fonts.bold};
-	padding-left: 5px;
+	/* padding-left: 5px; */
+	font-size: 24px;
+	margin-top: 15px;
 	cursor: pointer;
 	color: ${(props) => props.theme.colors.white};
 	text-transform: uppercase;
 	svg {
 		color: ${(props) => props.theme.colors.goldColors.color3};
-		width: 10px;
-		margin-left: 5px;
+		width: 20px;
+		margin-left: 12px;
 		transition: transform 0.2s ease-in-out;
 		${(props) =>
 			props.tooltipOpened &&
@@ -361,9 +367,10 @@ export const ExchangeCardsWithSelector = styled.div`
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 2px;
-	padding-bottom: 2px;
+	padding-bottom: 40px;
 	width: 100%;
 	margin: 0 auto;
+	border-bottom: 2px solid #000D56;
 	${media.lessThan('md')`
 		grid-template-columns: unset;
 		grid-template-rows: auto auto;
@@ -371,7 +378,7 @@ export const ExchangeCardsWithSelector = styled.div`
 	`}
 
 	.currency-card {
-		padding: 0 14px;
+		/* padding: 0 14px; */
 		${media.lessThan('md')`
 			padding: unset;
 		`}

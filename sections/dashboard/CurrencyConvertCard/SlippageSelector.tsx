@@ -87,7 +87,7 @@ export const SlippageSelector: FC<SlippageSelectorProps> = () => {
 			>
 				<DropdownSelection tooltipOpened={tooltipOpened}>
 					{formatPercent(slippage / 100, { minDecimals: 2 })}{' '}
-					<Svg src={CaretDownIcon} viewBox={`0 0 ${CaretDownIcon.width} ${CaretDownIcon.height}`} />
+					<Svg src={CaretDownIcon} className='dropDownIcon' viewBox={`0 0 ${CaretDownIcon.width} ${CaretDownIcon.height}`} />
 				</DropdownSelection>
 			</StyledSolidTooltip>
 		</Container>
@@ -106,6 +106,8 @@ const Container = styled.div`
 
 const Label = styled.div`
 	color: ${(props) => props.theme.colors.silver};
+	font-size:18px;
+	text-align: left;
 `;
 
 export default SlippageSelector;
