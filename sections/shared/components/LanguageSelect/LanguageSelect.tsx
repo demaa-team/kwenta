@@ -14,7 +14,6 @@ export const LanguageSelect: FC = () => {
 	const [language, setLanguage] = usePersistedRecoilState(languageState);
 
 	const languages = t('languages', { returnObjects: true }) as Record<Language, string>;
-
 	const languageOptions = useMemo(
 		() =>
 			Object.entries(languages).map(([langCode, langLabel]) => ({

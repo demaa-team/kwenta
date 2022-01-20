@@ -42,12 +42,13 @@ const Container = styled.div`
 const StyledCurrencyCardsSelector = styled(CurrencyCardsSelector)`
 	max-width: 260px;
 	width: 18%;
-	height: 150px;
+	top:50%;
+	height: 5rem;
 `;
 
 export const ExchangeFooter = styled.div`
 	.footer-card {
-		max-width: 1000px;
+		/* max-width: 1000px; */
 	}
 `;
 

@@ -17,9 +17,9 @@ export const RowsHeader = styled(FlexDivRow)`
 
 export const MenuModal = styled(BaseModal)`
 	[data-reach-dialog-content] {
-		margin-left: auto;
+		// margin-left: auto;
 		padding: 0;
-		margin-right: 12px;
+		// margin-right: 12px;
 		margin-top: calc(${HEADER_HEIGHT} + 10px);
 		${media.lessThan('sm')`
 			margin: 0;

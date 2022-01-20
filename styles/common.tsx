@@ -151,7 +151,9 @@ export const AbsoluteCenteredDiv = styled.div`
 export const PageContent = styled.section`
 	position: relative;
 	margin: 0 auto;
-	padding: 24px;
+	height:calc(100% - 3.5rem);
+	overflow:auto;
+	padding: 1rem;
 	width: 100%;
 	flex-grow: 1;
 	${(props) => props.theme.animations.show};
@@ -197,16 +199,20 @@ export const FullScreenContainer = styled(FlexDiv)`
 
 export const SwapCurrenciesButton = styled.button`
 	${resetButtonCSS};
-	background-color: ${(props) => props.theme.colors.elderberry};
-	color: ${(props) => props.theme.colors.white};
-	height: 32px;
-	width: 32px;
+	/* background-color: ${(props) => props.theme.colors.elderberry};
+	color: ${(props) => props.theme.colors.white}; */
+	/* height: 32px;
+	width: 32px; */
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	z-index: ${zIndex.BASE};
-	border: 2px solid ${(props) => props.theme.colors.black};
-	border-radius: 50%;
+	/* border: 2px solid ${(props) => props.theme.colors.black};
+	border-radius: 50%; */
+	.convertImg{
+		width: 28px;
+		height: 34px;
+	}
 `;
 
 export const Tooltip = styled(Tippy)`
@@ -283,13 +289,13 @@ export const FullHeightContainer = styled(FlexDiv)`
 	justify-content: space-between;
 	width: 100%;
 	flex-grow: 1;
-	height: 100vh;
+	height: calc(100vh - 5.9rem);
 	position: relative;
 `;
 
 export const MainContent = styled(FlexDivCol)`
 	flex-grow: 1;
-	max-width: 1000px;
+	/* max-width: 1000px; */
 	position: relative;
 	overflow: auto;
 	/* margin: ${SPACING_FROM_HEADER} auto 0 auto; */
@@ -298,7 +304,7 @@ export const MainContent = styled(FlexDivCol)`
 export const RightSideContent = styled(FlexDivCol)`
 	width: 380px;
 	background-color: ${(props) => props.theme.colors.elderberry};
-	padding: ${SPACING_FROM_HEADER} 0 5px 0;
+	padding: ${SPACING_FROM_HEADER} 0;
 	margin-right: -20px;
 	flex-shrink: 0;
 	position: relative;
@@ -344,15 +350,15 @@ export const DropdownSelection = styled.span.attrs({
 	align-items: center;
 	font-family: ${(props) => props.theme.fonts.bold};
 	/* padding-left: 5px; */
-	font-size: 24px;
-	margin-top: 15px;
+	font-size: 1.2rem;
+	margin-top: 0.75rem;
 	cursor: pointer;
 	color: ${(props) => props.theme.colors.white};
 	text-transform: uppercase;
 	svg {
 		color: ${(props) => props.theme.colors.goldColors.color3};
-		width: 20px;
-		margin-left: 12px;
+		width: 1rem;
+		margin-left: 0.6rem;
 		transition: transform 0.2s ease-in-out;
 		${(props) =>
 			props.tooltipOpened &&
@@ -367,14 +373,14 @@ export const ExchangeCardsWithSelector = styled.div`
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 2px;
-	padding-bottom: 40px;
+	// padding-bottom: 2rem;
 	width: 100%;
 	margin: 0 auto;
 	border-bottom: 2px solid #000D56;
 	${media.lessThan('md')`
 		grid-template-columns: unset;
 		grid-template-rows: auto auto;
-		padding-bottom: 24px;
+		padding-bottom: 1.2rem;
 	`}
 
 	.currency-card {
@@ -395,7 +401,7 @@ export const ExchangeCardsWithSelector = styled.div`
 		}
 		.currency-card-body {
 			position: relative;
-			padding-left: 61px;
+			padding-left: 23%;
 			${media.lessThan('md')`
 				padding-left: 18px;
 			`}

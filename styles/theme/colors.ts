@@ -9,7 +9,7 @@ export default {
 	black: '#1A2479',
 	vampire: '#08080F',
 	elderberry: '#203298',
-	navy: '#1A1A2E',
+	navy: '#203298',
 	stormcloud: '#57616B',
 	blueberry: '#9F9EC5',
 	silver: '#F86C29',

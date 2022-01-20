@@ -12,6 +12,7 @@ function Select<T>(props: Props<T>) {
 			container: (provided, state) => ({
 				...provided,
 				opacity: state.isDisabled ? 0.4 : 1,
+				border: `2px solid #1A2479`,
 			}),
 			singleValue: (provided) => ({
 				...provided,
@@ -40,7 +41,7 @@ function Select<T>(props: Props<T>) {
 			menu: (provided, state) => ({
 				...provided,
 				backgroundColor: colors.elderberry,
-				border: `1px solid ${colors.navy}`,
+				border: `2px solid #1A2479`,
 				boxShadow: 'none',
 				padding: 0,
 				width: state.selectProps.menuWidth,

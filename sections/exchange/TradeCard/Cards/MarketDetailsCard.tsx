@@ -219,7 +219,6 @@ const MarketDetailsCard: FC<MarketDetailsCardProps> = ({ currencyKey, priceRate,
 		</Card>
 	);
 };
-
 const StyledCardBody = styled(Card.Body)`
 	display: grid;
 	grid-gap: 40px;
@@ -238,7 +237,7 @@ const CardHeaderItems = styled.div`
 `;
 
 const Item = styled(FlexDivRowCentered)`
-	border-bottom: 1px solid ${(props) => props.theme.colors.navy};
+	// border-bottom: 1px solid ${(props) => props.theme.colors.navy};
 	padding: 8px 0;
 `;
 

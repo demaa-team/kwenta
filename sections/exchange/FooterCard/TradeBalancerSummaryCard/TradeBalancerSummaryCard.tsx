@@ -216,6 +216,7 @@ const Tooltip = styled(Tippy)`
 const StyledButton = styled(Button)`
 	margin: 20px auto 0 auto;
 	width: 320px;
+	font-size:1rem;
 `;
 
 const GasSelectContainer = styled.div`

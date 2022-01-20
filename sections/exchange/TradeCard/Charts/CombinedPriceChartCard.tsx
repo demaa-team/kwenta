@@ -208,7 +208,7 @@ const CombinedPriceChartCard: FC<CombinedPriceChartCardProps> = ({
 					</Actions>
 				)}
 			</ChartHeader>
-			<ChartBody>
+			<ChartBodyCopy>
 				<ChartData disabledInteraction={disabledInteraction}>
 					{isCompareChart ? (
 						<CompareChart {...{ baseCurrencyKey, quoteCurrencyKey, selectedChartPeriodLabel }} />
@@ -295,7 +295,7 @@ const CombinedPriceChartCard: FC<CombinedPriceChartCardProps> = ({
 						<NoData>{t('exchange.price-chart-card.no-data')}</NoData>
 					) : undefined}
 				</AbsoluteCenteredDiv>
-			</ChartBody>
+			</ChartBodyCopy>
 		</Container>
 	);
 };
@@ -319,11 +319,16 @@ function getMinNoOfDecimals(value: number): number {
 
 const Container = styled.div`
 	position: relative;
+	margin-top:0;
 `;
 
+const ChartBodyCopy = styled(ChartBody)`
+	background:#182576
+`
+
 const ChartHeader = styled(FlexDivRowCentered)`
-	border-bottom: 1px solid #171a1d;
-	padding-bottom: 5px;
+	// border-bottom: 1px solid #171a1d;
+	padding-bottom: 0.8rem;
 `;
 
 const BothMarketsClosedOverlayMessageContainer = styled(FlexDiv)`

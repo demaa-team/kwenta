@@ -38,7 +38,7 @@ export const CurrencyPrice = styled.span`
 `;
 
 export const Actions = styled(FlexDiv)<{ reverseChildren?: boolean }>`
-	margin-top: 5px;
+	// margin-top: 5px;
 	flex-direction: ${(props) => (props.reverseChildren ? 'row-reverse' : 'row')};
 	justify-content: space-between;
 	grid-gap: 15px;
@@ -51,6 +51,8 @@ export const Actions = styled(FlexDiv)<{ reverseChildren?: boolean }>`
 
 export const PeriodSelector = styled(GridDivCenteredCol)`
 	grid-gap: 8px;
+	padding-left:0.8rem;
+	// border-left:2px solid #111C60;
 `;
 
 export const ChartBody = styled.div`
@@ -60,9 +62,9 @@ export const ChartBody = styled.div`
 
 export const StyledTextButton = styled(TextButton)<{ isActive: boolean }>`
 	font-family: ${(props) => props.theme.fonts.bold};
-	color: ${(props) => (props.isActive ? props.theme.colors.white : props.theme.colors.blueberry)};
+	color: ${(props) => (props.isActive ? '#F86C29' : props.theme.colors.blueberry)};
 	border-bottom: 2px solid
-		${(props) => (props.isActive ? props.theme.colors.goldColors.color1 : 'transparent')};
+		${(props) => (props.isActive ? '#F86C29' : 'transparent')};
 	&:hover {
 		color: ${(props) => props.theme.colors.white};
 	}

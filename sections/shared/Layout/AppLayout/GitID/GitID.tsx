@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const GitID: FC = () => {
 	const gitID = process.env.GIT_HASH_ID!.toString();
 
-	return <GitIDFooter>{gitID}</GitIDFooter>;
+	return <GitIDFooter>{/*gitID*/}</GitIDFooter>;
 };
 
 const GitIDFooter = styled.div`

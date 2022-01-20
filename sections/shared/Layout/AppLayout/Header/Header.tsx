@@ -43,7 +43,7 @@ const Header: FC = () => {
 	z-index: ${zIndex.HEADER}; */
 const Container = styled.header<{ isL2: boolean }>`
 	border-bottom: 2px solid #000D56;
-	height: 70px;
+	height: 3.5rem;
 	${media.lessThan('md')`
 		position: fixed;
 		background-color: ${(props) => props.theme.colors.black};
@@ -55,7 +55,7 @@ const Container = styled.header<{ isL2: boolean }>`
 		box-sizing: border-box;
 		height: ${HEADER_HEIGHT};
 		line-height: ${HEADER_HEIGHT};
-		padding: 0 20px;
+		padding: 0 1rem;
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;

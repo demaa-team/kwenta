@@ -26,7 +26,7 @@ Card.Header = CardHeader;
 Card.Body = CardBody;
 
 const Container = styled.div<{ isRounded?: boolean }>`
-	background-color: ${(props) => props.theme.colors.elderberry};
+	/* background-color: ${(props) => props.theme.colors.elderberry}; */
 	display: flex;
 	flex-direction: column;
 	align-items: center;

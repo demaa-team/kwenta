@@ -105,7 +105,7 @@ export const SelectShortCurrencyModal: FC<SelectShortCurrencyModalProps> = ({
 					);
 				})}
 			</RowsContainer>
-			<StyledBottomShadow />
+			{/* <StyledBottomShadow /> */}
 		</StyledCenteredModal>
 	);
 };

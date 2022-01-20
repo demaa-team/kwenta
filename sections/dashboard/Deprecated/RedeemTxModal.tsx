@@ -29,7 +29,7 @@ export const RedeemTxModal: FC<RedeemTxModalProps> = ({
 	totalUSDBalance,
 }) => {
 	const { t } = useTranslation();
-
+debugger
 	return (
 		<StyledBaseModal
 			onDismiss={onDismiss}
@@ -38,7 +38,7 @@ export const RedeemTxModal: FC<RedeemTxModalProps> = ({
 		>
 			<Title>{t('modals.deprecated-synths.from')}</Title>
 			<Balances>
-				{balances.map((balance) => (
+				{balances.filter((v)=>!(v.currencyKey as String=="iETH")).map((balance) => (
 					<BalanceItem
 						key={balance.currencyKey}
 						currencyKey={balance.currencyKey}

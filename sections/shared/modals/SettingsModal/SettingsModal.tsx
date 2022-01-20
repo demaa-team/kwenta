@@ -35,6 +35,9 @@ const StyledMenuModal = styled(MenuModal)`
 	[data-reach-dialog-content] {
 		width: 216px;
 	}
+	display:flex;
+	align-item:center;
+	justify-content: center;
 	.card-body {
 		padding: 24px;
 	}
@@ -46,6 +49,7 @@ const OptionLabel = styled.div`
 	font-family: ${(props) => props.theme.fonts.bold};
 	color: ${(props) => props.theme.colors.white};
 	text-transform: capitalize;
+	margin-right:10px;
 `;
 
 const OptionRow = styled(FlexDivRowCentered)`

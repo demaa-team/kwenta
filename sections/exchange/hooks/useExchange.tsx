@@ -100,6 +100,7 @@ type ExchangeCardProps = {
 	allowBaseCurrencySelection?: boolean;
 	showNoSynthsCard?: boolean;
 	txProvider?: TxProvider;
+	customFooterCardStyle?:boolean;
 };
 
 const useExchange = ({
@@ -114,6 +115,7 @@ const useExchange = ({
 	allowBaseCurrencySelection = true,
 	showNoSynthsCard = true,
 	txProvider = 'synthetix',
+	customFooterCardStyle=false
 }: ExchangeCardProps) => {
 	const { t } = useTranslation();
 	const { monitorTransaction } = TransactionNotifier.useContainer();
@@ -1076,7 +1078,7 @@ const useExchange = ({
 	const footerCard = (
 		<>
 			{!isWalletConnected ? (
-				<ConnectWalletCard attached={footerCardAttached} />
+				<ConnectWalletCard attached={footerCardAttached} className={customFooterCardStyle?'custom-footer-style':''}/>
 			) : hasNoL2Gas ? (
 				<GetL2GasCard attached={footerCardAttached} />
 			) : (baseCurrencyMarketClosed.isMarketClosed &&

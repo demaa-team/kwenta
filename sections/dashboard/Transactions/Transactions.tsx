@@ -1,4 +1,4 @@
-import { FC, useState, useMemo, useCallback } from 'react';
+import { FC,useState, useMemo, useCallback } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import { CATEGORY_MAP } from 'constants/currency';
@@ -23,28 +23,28 @@ const Transactions: FC = () => {
 
 	const synthFilterList = useMemo(
 		() => [
-			{ label: t('dashboard.transactions.synth-sort.allSynths'), key: 'ALL_SYNTHS' },
-			{ label: t('common.currency-category.crypto'), key: CATEGORY_MAP['crypto'] },
-			{ label: t('common.currency-category.forex'), key: CATEGORY_MAP['forex'] },
-			{ label: t('common.currency-category.commodity'), key: CATEGORY_MAP['commodity'] },
-			{ label: t('common.currency-category.equities'), key: CATEGORY_MAP['equities'] },
+			{ label: 'dashboard.transactions.synth-sort.allSynths', key: 'ALL_SYNTHS' },
+			{ label: 'common.currency-category.crypto', key: CATEGORY_MAP['crypto'] },
+			{ label: 'common.currency-category.forex', key: CATEGORY_MAP['forex'] },
+			{ label: 'common.currency-category.commodity', key: CATEGORY_MAP['commodity'] },
+			{ label: 'common.currency-category.equities', key: CATEGORY_MAP['equities'] },
 		],
 		[t]
 	);
 	const orderTypeList = useMemo(
 		() => [
 			{
-				label: t('dashboard.transactions.order-type-sort.allOrderTypes'),
+				label: 'dashboard.transactions.order-type-sort.allOrderTypes',
 				key: 'ALL_ORDER_TYPES',
 			},
-			{ label: t('dashboard.transactions.order-type-sort.market'), key: 'MARKET' },
+			{ label: 'dashboard.transactions.order-type-sort.market', key: 'MARKET' },
 			/* { label: t('dashboard.transactions.order-type-sort.limit'), key: 'LIMIT' }, */
 		],
 		[t]
 	);
 	const orderSizeList = useMemo(
 		() => [
-			{ label: 'All Sizes', key: 'ALL_ORDER_SIZES' },
+			{ label: 'dashboard.transactions.order-size-list.all-sizes', key: 'ALL_ORDER_SIZES' },
 			{ label: '< 1000', key: 'LTET1000' },
 			{ label: '1000 < x < 10,000', key: 'GT1000LTET10000' },
 			{ label: '10,000 < x < 100,000', key: 'GT10000LTET100000' },
@@ -117,13 +117,12 @@ const Transactions: FC = () => {
 			createOrderSizeFilter,
 		]
 	);
-
 	return (
 		<>
 			<Filters>
 				<Select
 					inputId="synth-filter-list"
-					formatOptionLabel={(option: any) => <CapitalizedText>{option.label}</CapitalizedText>}
+					formatOptionLabel={(option: any) => <CapitalizedText>{t(option.label)}</CapitalizedText>}
 					options={synthFilterList}
 					value={synthFilter}
 					onChange={(option: any) => {
@@ -134,7 +133,7 @@ const Transactions: FC = () => {
 				/>
 				<Select
 					inputId="order-type-list"
-					formatOptionLabel={(option: any) => <CapitalizedText>{option.label}</CapitalizedText>}
+					formatOptionLabel={(option: any) => <CapitalizedText>{t(option.label)}</CapitalizedText>}
 					options={orderTypeList}
 					value={orderType}
 					onChange={(option: any) => {
@@ -145,7 +144,7 @@ const Transactions: FC = () => {
 				/>
 				<Select
 					inputId="order-size-list"
-					formatOptionLabel={(option: any) => <CapitalizedText>{option.label}</CapitalizedText>}
+					formatOptionLabel={(option: any) => <CapitalizedText>{t(option.label)}</CapitalizedText>}
 					options={orderSizeList}
 					value={orderSize}
 					onChange={(option: any) => {

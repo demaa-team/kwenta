@@ -54,11 +54,13 @@ import Connector from 'containers/Connector';
 type ShortCardProps = {
 	defaultBaseCurrencyKey?: CurrencyKey | null;
 	defaultQuoteCurrencyKey?: CurrencyKey | null;
+	customFooterCardStyle?:boolean;
 };
 
 const useShort = ({
 	defaultBaseCurrencyKey = null,
 	defaultQuoteCurrencyKey = null,
+	customFooterCardStyle = false
 }: ShortCardProps) => {
 	const { t } = useTranslation();
 	const { monitorTransaction } = TransactionNotifier.useContainer();
@@ -540,7 +542,7 @@ const useShort = ({
 	const footerCard = (
 		<>
 			{!isWalletConnected ? (
-				<ConnectWalletCard attached={true} />
+				<ConnectWalletCard attached={true} className={customFooterCardStyle?'custom-footer-style':''}/>
 			) : baseCurrencyMarketClosed.isMarketClosed || quoteCurrencyMarketClosed.isMarketClosed ? (
 				<MarketClosureCard
 					baseCurrencyMarketClosed={baseCurrencyMarketClosed}

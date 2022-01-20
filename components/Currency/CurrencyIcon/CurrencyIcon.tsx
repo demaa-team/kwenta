@@ -25,6 +25,8 @@ export type CurrencyIconProps = {
 export const SNXIcon =
 	'https://raw.githubusercontent.com/Synthetixio/synthetix-assets/master/snx/SNX.svg';
 
+export const SCNIcon =require('../../../assets/svg/currencies/crypto/SCN2111.png');
+
 export const getSynthIcon = (currencyKey: CurrencyKey) =>
 	`https://raw.githubusercontent.com/Synthetixio/synthetix-assets/master/synths/${currencyKey}.svg`;
 
@@ -68,11 +70,20 @@ const CurrencyIcon: FC<CurrencyIconProps> = ({ currencyKey, type, isDeprecated, 
 
 	if (!firstFallbackError) {
 		switch (currencyKey) {
+			// case CRYPTO_CURRENCY_MAP.ETH: {
+			// 	return <Img src={ETHIcon} {...props} />;
+			// }
+			// case CRYPTO_CURRENCY_MAP.DEM: {
+			// 	return <img src={SNXIcon} {...props} alt="snx-icon" />;
+			// }
 			case CRYPTO_CURRENCY_MAP.ETH: {
 				return <Img src={ETHIcon} {...props} />;
 			}
 			case CRYPTO_CURRENCY_MAP.DEM: {
 				return <img src={SNXIcon} {...props} alt="snx-icon" />;
+			}
+			case CRYPTO_CURRENCY_MAP.sCN2111: {
+				return <img src={SCNIcon} {...props} alt="scn-icon"/>;
 			}
 			default:
 				return (
@@ -116,11 +127,36 @@ const CurrencyIcon: FC<CurrencyIconProps> = ({ currencyKey, type, isDeprecated, 
 			/>
 		);
 	} else {
-		return (
-			<Placeholder {...{ isDeprecated }} style={{ width: props.width, height: props.height }}>
-				{currencyKey}
-			</Placeholder>
-		);
+		switch (currencyKey) {
+			case CRYPTO_CURRENCY_MAP.ETH: {
+				return <Img src={ETHIcon} {...props} />;
+			}
+			case CRYPTO_CURRENCY_MAP.DEM: {
+				return <img src={SNXIcon} {...props} alt="snx-icon" />;
+			}
+			case CRYPTO_CURRENCY_MAP.SCN: {
+				return <img src={SCNIcon} {...props} alt="scn-icon"/>;
+			}
+			default:
+				return (
+					<TokenIcon
+						{...{ isDeprecated }}
+						src={
+							synthetixTokenListMap != null && synthetixTokenListMap[currencyKey] != null
+								? synthetixTokenListMap[currencyKey].logoURI
+								: getSynthIcon(currencyKey as CurrencyKey)
+						}
+						onError={() => setFirstFallbackError(true)}
+						{...props}
+						alt={currencyKey}
+					/>
+				);
+		}
+		// return (
+		// 	<Placeholder {...{ isDeprecated }} style={{ width: props.width, height: props.height }}>
+		// 		{currencyKey}
+		// 	</Placeholder>
+		// );
 	}
 };
 

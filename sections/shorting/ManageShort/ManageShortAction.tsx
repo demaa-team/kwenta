@@ -494,6 +494,7 @@ const ManageShortAction: FC<ManageShortActionProps> = ({
 									isRounded={true}
 									onClick={handleSubmit}
 									size="lg"
+									style={{marginTop:'10px'}}
 									disabled={isSubmissionDisabled}
 								>
 									{isSubmissionDisabled

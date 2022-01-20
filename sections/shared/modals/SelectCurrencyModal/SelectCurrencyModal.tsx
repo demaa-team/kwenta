@@ -57,7 +57,6 @@ export const SelectCurrencyModal: FC<SelectCurrencyModalProps> = ({
 		synthsOverride != null
 			? allSynths.filter((synth) => synthsOverride.includes(synth.name as CurrencyKey))
 			: allSynths;
-
 	const synthsWalletBalancesQuery = useSynthsBalancesQuery(walletAddress);
 	const synthBalances = synthsWalletBalancesQuery.isSuccess
 		? synthsWalletBalancesQuery.data ?? null
@@ -84,9 +83,8 @@ export const SelectCurrencyModal: FC<SelectCurrencyModalProps> = ({
 		[categoryFilteredSynths, assetSearch],
 		DEFAULT_SEARCH_DEBOUNCE_MS
 	);
-
 	const synthsResults = useMemo(() => {
-		const synthsList = assetSearch ? searchFilteredSynths : categoryFilteredSynths;
+		const synthsList = (assetSearch ? searchFilteredSynths : categoryFilteredSynths).filter(v=>v.name !== 'iETH');
 		if (synthsWalletBalancesQuery.isSuccess) {
 			return orderBy(
 				synthsList,
@@ -105,7 +103,6 @@ export const SelectCurrencyModal: FC<SelectCurrencyModalProps> = ({
 		synthsWalletBalancesQuery.isSuccess,
 		synthBalances,
 	]);
-
 	return (
 		<StyledCenteredModal
 			onDismiss={onDismiss}
@@ -180,7 +177,7 @@ export const SelectCurrencyModal: FC<SelectCurrencyModalProps> = ({
 					<EmptyDisplay>{t('modals.select-currency.search.empty-results')}</EmptyDisplay>
 				)}
 			</RowsContainer>
-			<StyledBottomShadow />
+			{/* <StyledBottomShadow /> */}
 		</StyledCenteredModal>
 	);
 };
@@ -195,7 +192,7 @@ const StyledCenteredModal = styled(CenteredModal)`
 		width: 400px;
 	}
 	.card-body {
-		height: 80vh;
+		height: 50vh;
 		padding: 16px 0;
 		overflow: hidden;
 	}

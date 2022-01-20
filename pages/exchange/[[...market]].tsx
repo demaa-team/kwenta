@@ -2,10 +2,11 @@ import Head from 'next/head';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import Slider from 'react-slick';
-import { Svg } from 'react-optimized-image';
+import Img,{ Svg } from 'react-optimized-image';
 import { AnimateSharedLayout, AnimatePresence, motion } from 'framer-motion';
 
 import ArrowsIcon from 'assets/svg/app/arrows.svg';
+import ConvertImg from 'assets/png/exchange/convert.png';
 import SingleChartIcon from 'assets/svg/app/single-chart.svg';
 import DoubleChartIcon from 'assets/svg/app/double-chart.svg';
 import { zIndex } from 'constants/ui';
@@ -27,7 +28,7 @@ import {
 import { DesktopOnlyView, MobileOrTabletView } from 'components/Media';
 import useExchange from 'sections/exchange/hooks/useExchange';
 import { CurrencyKey } from 'constants/currency';
-import { DEFAULT_WIDTH } from 'sections/exchange/TradeCard/constants';
+import { DEFAULT_WIDE_WIDTH as wideWidth } from 'sections/exchange/TradeCard/constants';
 
 const ExchangePage = () => {
 	const { t } = useTranslation();
@@ -57,6 +58,7 @@ const ExchangePage = () => {
 		routingEnabled: true,
 		persistSelectedCurrencies: true,
 		showNoSynthsCard: true,
+		customFooterCardStyle:true,
 	});
 
 	const chartsToggler = (
@@ -65,7 +67,7 @@ const ExchangePage = () => {
 				<ChartsTogglerText active={isShowingSingleChart}>
 					{t('exchange.charts.single')}
 				</ChartsTogglerText>
-				{isShowingSingleChart ? <Svg src={SingleChartIcon} /> : <Svg src={DoubleChartIcon} />}
+				{/* {isShowingSingleChart ? <Svg src={SingleChartIcon} /> : <Svg src={DoubleChartIcon} />} */}
 				<ChartsTogglerText active={!isShowingSingleChart}>
 					{t('exchange.charts.double')}
 				</ChartsTogglerText>
@@ -94,7 +96,8 @@ const ExchangePage = () => {
 						<DesktopContainer>
 							<SwapCurrenciesButtonContainer>
 								<SwapCurrenciesButton onClick={handleCurrencySwap} data-testid="swap-btn">
-									<Svg src={ArrowsIcon} />
+									{/* <Svg src={ArrowsIcon} /> */}
+									<Img src={ConvertImg} className='convertImg'/>
 								</SwapCurrenciesButton>
 							</SwapCurrenciesButtonContainer>
 
@@ -105,20 +108,20 @@ const ExchangePage = () => {
 										{baseCurrencyCard}
 									</RightCardContainer>
 								</DesktopCardsContainer>
+								<PageWidthContainer className='footer-card-wrap'>{footerCard}</PageWidthContainer>
 							</PageWidthContainer>
 
-							<PageWidthContainer>{footerCard}</PageWidthContainer>
 
 							<AnimateSharedLayout>
 								{chartsToggler}
 
-								<ChartsContainer>
+								<ChartsTopContainer isShowingSingleChart={isShowingSingleChart}>
 									{isShowingSingleChart ? (
 										<AnimatePresence>
 											<motion.div
 												layout
 												initial={{ width: wideWidth }}
-												animate={{ width: DEFAULT_WIDTH }}
+												animate={{ width: wideWidth }}
 												exit={{ width: wideWidth }}
 												transition={{ ease: 'easeOut' }}
 											>
@@ -129,9 +132,9 @@ const ExchangePage = () => {
 										<AnimatePresence>
 											<motion.div
 												layout
-												initial={{ width: DEFAULT_WIDTH }}
+												initial={{ width: wideWidth }}
 												animate={{ width: wideWidth }}
-												exit={{ width: DEFAULT_WIDTH }}
+												exit={{ width: wideWidth }}
 												transition={{ ease: 'easeOut' }}
 											>
 												<DesktopCardsGapped>
@@ -145,14 +148,15 @@ const ExchangePage = () => {
 											</motion.div>
 										</AnimatePresence>
 									)}
-								</ChartsContainer>
+								</ChartsTopContainer>
 
-								<ChartsContainer>
+								<ChartsBottomContainer isShowingSingleChart={isShowingSingleChart}>
 									{isShowingSingleChart ? (
-										<motion.div
+										<motion.div 
+											style={{background: '#182576'}}
 											layout
 											initial={{ width: wideWidth }}
-											animate={{ width: DEFAULT_WIDTH }}
+											animate={{ width: wideWidth }}
 											exit={{ width: wideWidth }}
 											transition={{ ease: 'easeOut' }}
 										>
@@ -161,22 +165,22 @@ const ExchangePage = () => {
 									) : (
 										<motion.div
 											layout
-											initial={{ width: DEFAULT_WIDTH }}
+											initial={{ width: wideWidth }}
 											animate={{ width: wideWidth }}
-											exit={{ width: DEFAULT_WIDTH }}
+											exit={{ width: wideWidth }}
 											transition={{ ease: 'easeOut' }}
 										>
 											<DesktopCardsGapped>
-												<LeftCardContainer data-testid="left-side">
+												<CurrLeftCardContainer data-testid="left-side">
 													{quoteMarketDetailsCard}
-												</LeftCardContainer>
-												<RightCardContainer data-testid="right-side">
+												</CurrLeftCardContainer>
+												<CurrRightCardContainer data-testid="right-side">
 													{baseMarketDetailsCard}
-												</RightCardContainer>
+												</CurrRightCardContainer>
 											</DesktopCardsGapped>
 										</motion.div>
 									)}
-								</ChartsContainer>
+								</ChartsBottomContainer>
 							</AnimateSharedLayout>
 							<GitIDFooter />
 						</DesktopContainer>
@@ -228,7 +232,7 @@ const StyledPageContent = styled(PageContent)`
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		padding: 55px 40px 40px;
+		/* padding: 55px 40px 40px; */
 	`}
 
 	.currency-card {
@@ -240,18 +244,52 @@ const StyledPageContent = styled(PageContent)`
 	.market-details-card {
 		width: 100%;
 		${media.lessThan('md')`
-		max-width: unset;
-	`}
+			max-width: unset;
+		`}
+		&>div{
+			width: 100%;
+		}
 	}
 `;
 
-const ChartsContainer = styled.div`
-	margin: 0 auto 30px;
+const ChartsTopContainer = styled.div<{isShowingSingleChart:boolean}>`
+	background: #203298;
+	border-top-left-radius:1rem;
+	border-top-right-radius:1rem;
+	padding:1rem 1rem 0;
+	.period-select{
+		border-left:2px solid ${(props) => (props.isShowingSingleChart ? '#111C60' : 'transparent')};
+	}
+	.compare-ratio{
+		border-left:2px solid ${(props) => (props.isShowingSingleChart ? '#111C60' : 'transparent')};
+	}
+`; 
+
+const ChartsBottomContainer = styled.div<{isShowingSingleChart:boolean}>`
+	background: #203298;
+	border-bottom-left-radius:1rem;
+	border-bottom-right-radius:1rem;
+	border-top:1px solid #203298;
+	padding:0 1rem 1rem;
+	.period-select{
+		border-left:2px solid ${(props) => (props.isShowingSingleChart ? '#111C60' : 'transparent')};
+	}
+	.compare-ratio{
+		border-left:2px solid ${(props) => (props.isShowingSingleChart ? '#111C60' : 'transparent')};
+	}
 `;
 
 const PageWidthContainer = styled.div`
-	width: ${DEFAULT_WIDTH}px;
-	margin: 0 auto;
+	/* width: ${wideWidth}px;
+	margin: 0 auto; */
+	background: #203298;
+	border-radius: 1rem;
+	margin-bottom:0.9rem;
+	padding:1rem 0;
+	&.footer-card-wrap{
+		margin-bottom: 0px;
+		border-radius: inherit;
+	}
 `;
 
 const FooterContainer = styled.div`
@@ -269,16 +307,23 @@ const DesktopCardsContainer = styled.div`
 `;
 
 const DesktopCardsGapped = styled(DesktopCardsContainer)`
-	grid-gap: 60px;
+	// grid-gap: 60px;
 	margin: 0 auto;
 `;
 
 const SwapCurrenciesButtonContainer = styled.div`
 	align-self: flex-start;
-	margin-top: 37px;
+	margin-top: 25px;
 	position: absolute;
 	left: calc(50% - 16px);
 	z-index: ${zIndex.BASE + 10};
+	width: 76px;
+	height: 97px;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+	border-left:2px solid #000D56;
+	border-right:2px solid #000D56;
 `;
 
 const CardContainerMixin = `
@@ -293,6 +338,12 @@ const RightCardContainer = styled.div`
 	${CardContainerMixin};
 `;
 
+const CurrLeftCardContainer = styled(LeftCardContainer)`
+	background:#182576
+`
+const CurrRightCardContainer = styled(RightCardContainer)`
+	background:#182576
+`
 const MobileContainer = styled(FlexDivColCentered)`
 	${MobileContainerMixin};
 	margin-bottom: 110px;
@@ -337,21 +388,27 @@ const ChartsTogglerContainer = styled.div`
 
 const ChartsToggler = styled.div`
 	position: absolute;
-	top: 3.5px;
+	top: 0.8rem;
 	left: calc(50% - 63.5px);
-	width: 135px;
-	height: 20px;
+	// width: 135px;
+	height: 2rem;
+	line-height:2rem;
 	border-radius: 5px;
 	cursor: pointer;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	border-radius:1rem;
 	background: ${(props) => props.theme.colors.black};
 `;
 
 const ChartsTogglerText = styled.div<{ active: boolean }>`
 	text-transform: uppercase;
-	color: ${(props) => (props.active ? props.theme.colors.white : props.theme.colors.silver)};
+	padding:0 1rem;
+	background:${(props) => (props.active ? '#F86C29' : '')};
+	border-radius:1rem;
+	color:#fff;
+	// color: ${(props) => (props.active ? props.theme.colors.white : props.theme.colors.silver)};
 `;
 
 export default ExchangePage;

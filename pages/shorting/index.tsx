@@ -42,31 +42,43 @@ const Shorting: FC = () => {
 			<AppLayout>
 				<PageContent>
 					{!isL2 && (
-						<FullHeightContainer>
-							<MainContent>
+						<Container>
+							<MainContentCopy>
 								<ShortingCard />
 								{isWalletConnected && <ShortingHistory />}
 								<GitIDFooter />
-							</MainContent>
+							</MainContentCopy>
 							<DesktopOnlyView>
 								<StyledRightSideContent>
 									<ShortingRewards />
 									<ShortingStats />
 								</StyledRightSideContent>
 							</DesktopOnlyView>
-						</FullHeightContainer>
+						</Container>
 					)}
 				</PageContent>
 			</AppLayout>
 		</>
 	);
 };
-
+const Container = styled.div`
+	// padding-top: 90px;
+`;
+const MainContentCopy = styled(MainContent)`
+	background:#203298;
+	border-radius:1rem;
+	padding:0 1.6rem;
+`
 const StyledRightSideContent = styled(RightSideContent)`
+	width:100%;
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+	margin:1rem 0;
+	border-radius:1rem;
 	padding-left: 32px;
 	padding-right: 32px;
 	> * + * {
-		margin-top: 50px;
+		// margin-top: 50px;
 	}
 `;
 

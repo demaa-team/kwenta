@@ -39,10 +39,10 @@ const DashboardPage = () => {
 				<PageContent>
 					<DesktopOnlyView>
 						<FullHeightContainer>
-							<MainContent>
+							<MainContentCopy>
 								{activeView}
 								<GitIDFooter />
-							</MainContent>
+							</MainContentCopy>
 							{isWalletConnected && (
 								<RightSideContent>
 									<TrendingSynths />
@@ -60,7 +60,9 @@ const DashboardPage = () => {
 		</>
 	);
 };
-
+const MainContentCopy = styled(MainContent)`
+	// background:#203298
+`
 const MobileContainer = styled.div`
 	${MobileContainerMixin};
 	padding-top: 90px;

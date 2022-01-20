@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
-
 import { ChartType } from 'constants/chartType';
 import { Period } from 'constants/period';
 import { FlexDiv } from 'styles/common';
@@ -17,7 +16,6 @@ type ChartTypeToggleProps = {
 
 	itemIsDisabled?: (c: ChartType) => boolean;
 };
-
 const ChartTypeToggle: FC<ChartTypeToggleProps> = ({
 	chartTypes,
 
@@ -31,7 +29,7 @@ const ChartTypeToggle: FC<ChartTypeToggleProps> = ({
 }) => {
 	const { t } = useTranslation();
 	return (
-		<CompareRatioToggleContainer>
+		<CompareRatioToggleContainer className="compare-ratio">
 			<CompareRatioToggle>
 				{chartTypes.map((chartType) =>
 					itemIsDisabled?.(chartType) ?? false ? null : (
@@ -61,6 +59,8 @@ const ChartTypeToggle: FC<ChartTypeToggleProps> = ({
 export const CompareRatioToggleContainer = styled(FlexDiv)`
 	flex-direction: column;
 	justify-content: center;
+	padding-left:0.8rem;
+	// border-left:2px solid #111C60;
 `;
 
 export const CompareRatioToggle = styled(FlexDiv)`
@@ -70,8 +70,8 @@ export const CompareRatioToggle = styled(FlexDiv)`
 export const CompareRatioToggleType = styled.div<{ isActive: boolean }>`
 	cursor: pointer;
 	font-weight: bold;
-	border-bottom: 2px solid ${(props) => (props.isActive ? '#b68b58' : 'transparent')};
-	color: ${(props) => (props.isActive ? props.theme.colors.white : 'inherit')};
+	border-bottom: 2px solid ${(props) => (props.isActive ? '#F86C29' : 'transparent')};
+	color: ${(props) => (props.isActive ? '#F86C29' : 'inherit')};
 	text-transform: uppercase;
 `;
 

@@ -63,7 +63,7 @@ const UserMenu: FC<UserMenuProps> = ({ isTextButton }) => {
 			<Container>
 				<FlexDivCentered>
 					<Menu>
-						<NetworksSwitcher />
+						{/* <NetworksSwitcher /> */}
 						{isWalletConnected && (
 							<MenuButton
 								onClick={() => {
@@ -111,7 +111,7 @@ const UserMenu: FC<UserMenuProps> = ({ isTextButton }) => {
 							}}
 							isActive={settingsModalOpened}
 						>
-							<Img src={MenuSettingIcon} sizes={[32]}/>
+							<Img src={MenuSettingIcon} sizes={[20]}/>
 						</MenuButton>
 					</Menu>
 					
@@ -131,13 +131,15 @@ const UserMenu: FC<UserMenuProps> = ({ isTextButton }) => {
 const Container = styled.div``;
 
 const Menu = styled.div`
-	padding-right: 16px;
+	padding-right: 0.8rem;
 	display: grid;
-	grid-gap: 22px;
+	grid-gap: 1.1rem;
 	grid-auto-flow: column;
 	align-items:center;
 	.walletBtn{
-		border-radius: 20px;
+		border-radius: 1rem;
+		height: 2rem;
+    	padding: 0 2rem;
 	}
 `;
 

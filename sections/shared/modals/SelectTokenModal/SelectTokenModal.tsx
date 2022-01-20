@@ -200,7 +200,7 @@ export const SelectTokenModal: FC<SelectTokenModalProps> = ({
 					<EmptyDisplay>{t('modals.select-token.search.empty-results')}</EmptyDisplay>
 				)}
 			</StyledRowsContainer>
-			<StyledBottomShadow />
+			{/* <StyledBottomShadow /> */}
 		</StyledCenteredModal>
 	);
 };
@@ -210,7 +210,7 @@ const StyledCenteredModal = styled(CenteredModal)`
 		width: 400px;
 	}
 	.card-body {
-		height: 80vh;
+		height: 50vh;
 		padding: 16px 0;
 		overflow: hidden;
 	}

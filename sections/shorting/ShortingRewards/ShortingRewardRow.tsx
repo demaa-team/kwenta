@@ -207,13 +207,17 @@ const StyledCard = styled(Card)`
 `;
 
 const StyledCardBody = styled(Card.Body)`
+	width:100%;
 	padding: 4px ​12px;
-	background: ${(props) => props.theme.colors.navy};
+	background: #1A2479;
 `;
 
 const RewardsAmount = styled.span`
 	font-family: ${(props) => props.theme.fonts.bold};
-	padding-left: 10px;
+	padding-left:0.7rem;
+	margin-left:1rem;
+	border-left:1px solid #3F59EC;
+	// padding-left: 10px;
 `;
 
 const RewardsAmountContainer = styled(FlexDivCentered)`

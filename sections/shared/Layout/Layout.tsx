@@ -33,8 +33,8 @@ const GlobalStyle = createGlobalStyle`
 	${media.greaterThan('mdUp')`
 		@media (prefers-color-scheme: light) {
 			::-webkit-scrollbar {
-				width: 13px;
-				height: 13px;
+				width: 0px;
+				height: 0px;
 			}
 
 			::-webkit-scrollbar-track {
@@ -52,7 +52,9 @@ const GlobalStyle = createGlobalStyle`
 			}
 		}
 	`};
-
+	html{
+		font-size:calc(100vw / 96);
+	}
 	body {
 		background-color: ${(props) => props.theme.colors.black};
 		color: ${(props) => props.theme.colors.blueberry};

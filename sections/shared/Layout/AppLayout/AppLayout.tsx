@@ -26,8 +26,10 @@ const AppLayout: FC<AppLayoutProps> = ({ children }) => (
 );
 const Container=styled.div`
 	display: flex;
+	height:100%;
 `
 const ContentWrapper=styled.div`
+	width:calc(100% - 13.5rem);
 	flex:1;
 `
 

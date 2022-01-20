@@ -76,7 +76,7 @@ const ShortingStats = () => {
 	}, [shortStatsMap]);
 
 	return (
-		<div>
+		<Container>
 			<StyledTitle>{t('shorting.stats.title')}</StyledTitle>
 			<Table>
 				<thead>
@@ -89,7 +89,7 @@ const ShortingStats = () => {
 					{SYNTHS_TO_SHORT.map((currencyKey) => (
 						<TableRow key={currencyKey}>
 							<TableCell colSpan={2}>
-								<StyledCurrencyName currencyKey={currencyKey} showIcon={true} />
+								<StyledCurrencyName currencyKey={currencyKey} />
 							</TableCell>
 							<TableCell>
 								<NumericValue>
@@ -106,7 +106,7 @@ const ShortingStats = () => {
 							</TableCell>
 						</TableRow>
 					))}
-					<TableRow>
+					<TableRow className="cur-table">
 						<TableCell colSpan={2}>
 							<TotalLabel>{t('shorting.stats.table.total')}</TotalLabel>
 						</TableCell>
@@ -122,10 +122,12 @@ const ShortingStats = () => {
 					</TableRow>
 				</tbody>
 			</Table>
-		</div>
+		</Container>
 	);
 };
-
+const Container = styled.div`
+	padding-left:1rem;
+`
 const StyledTitle = styled(Title)`
 	padding-bottom: 0;
 `;
@@ -133,6 +135,7 @@ const StyledTitle = styled(Title)`
 const TableRow = styled.tr`
 	text-align: left;
 	height: 40px;
+	color:#F86C29;
 	border-bottom: 1px solid ${(props) => props.theme.colors.navy};
 	&:last-child {
 		border-bottom: 0;
@@ -165,9 +168,9 @@ const StyledCurrencyName = styled(Currency.Name)`
 
 const TotalLabel = styled.span`
 	font-family: ${(props) => props.theme.fonts.regular};
-	color: ${(props) => props.theme.colors.blueberry};
 	text-transform: capitalize;
 	font-family: ${(props) => props.theme.fonts.bold};
+	color:#D9DDF4
 `;
 
 export default ShortingStats;

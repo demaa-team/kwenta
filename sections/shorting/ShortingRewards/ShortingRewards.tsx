@@ -73,7 +73,7 @@ const ShortingRewards: FC = () => {
 	]);
 
 	return (
-		<div>
+		<Container>
 			<Title>{t('shorting.rewards.title')}</Title>
 			{SYNTHS_TO_SHORT.map((currencyKey) => (
 				<ShortingReward
@@ -82,16 +82,20 @@ const ShortingRewards: FC = () => {
 				/>
 			))}
 			<StyledGasPriceSummaryItem {...{ gasPrices, transactionFee }} />
-		</div>
+		</Container>
 	);
 };
-
+const Container = styled.div`
+	padding-right:2rem;
+	border-right:0.2rem solid #101964;
+`
 const StyledGasPriceSummaryItem = styled(GasPriceSummaryItem)`
 	padding: 5px 0;
 	display: flex;
 	justify-content: space-between;
 	width: auto;
-	border-bottom: 1px solid ${(props) => props.theme.colors.navy};
+	color: #D9DDF4;
+	// border-bottom: 1px solid ${(props) => props.theme.colors.navy};
 `;
 
 export default ShortingRewards;

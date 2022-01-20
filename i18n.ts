@@ -4,11 +4,13 @@ import { initReactI18next } from 'react-i18next';
 import { Language } from 'translations/constants';
 
 import enTranslation from './translations/en.json';
+import zhTranslation from './translations/zh.json';
 
 // TODO: lazy load it
 i18n.use(initReactI18next).init({
 	resources: {
 		[Language.EN]: { translation: enTranslation },
+		[Language.ZH]: { translation: zhTranslation },
 	},
 	fallbackLng: Language.EN,
 	lng: DEFAULT_LANGUAGE,

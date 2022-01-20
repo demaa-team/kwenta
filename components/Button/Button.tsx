@@ -8,11 +8,11 @@ type ButtonProps = {
 	isRounded?: boolean;
 };
 
+// font-family: ${(props) => props.theme.fonts.bold};
 const Button = styled.button<ButtonProps>`
-	font-family: ${(props) => props.theme.fonts.bold};
-	height: 32px;
-	font-size: 12px;
-	padding: 0 12px;
+	height: 1.6rem;
+	font-size: 0.6rem;
+	padding: 0 0.6rem;
 	border-radius: ${(props) => (props.isRounded ? '100px' : '4px')};
 	border: none;
 	white-space: nowrap;
@@ -43,9 +43,9 @@ const Button = styled.button<ButtonProps>`
 	${(props) =>
 		props.size === 'lg' &&
 		css`
-			padding: 0 40px;
-			height: 50px;
-			line-height: 50px;
+			padding: 0 2rem;
+			height: 2.5rem;
+			line-height: 2.5rem;
 		`}		
 
 

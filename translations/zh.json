@@ -1,0 +1,762 @@
+{
+	"languages": {
+		"zh": "中文",
+		"en": "英语"
+	},
+	"meta": {
+		"description": "以零滑点获得polygon上的加密货币、外汇、股票、指数和商品",
+		"og": {
+			"title": "兑换",
+			"site-name": "兑换"
+		}
+	},
+	"header": {
+		"nav": {
+			"exchange": "兑换",
+			"dashboard": "仪表板",
+			"shorting": "做空"
+		},
+		"networks-switcher": {
+			"l2": "切换到 L2",
+			"l1": "切换到第一层",
+			"optimistic-gateway": "Optimism L2 网关",
+			"optimistic-etherscan": "Optimism Etherscan",
+			"learn-more": "了解更多",
+			"optimism-mainnet": "Optimism",
+			"optimism-testnet": "OΞ Kovan"
+		}
+	},
+	"homepage": {
+		"page-title": "Swap| 无限流动性的衍生品交易",
+		"nav": {
+			"start-trading": "开始交易",
+			"wallet": "连接钱包",
+			"why": "为什么交换？",
+			"how": "它是如何工作的",
+			"faq": "常见问题"
+		},
+		"hero": {
+			"title": "零滑点的衍生品交易"
+		},
+		"assets": {
+			"title": "在polygon交易现实世界的资产和衍生品",
+			"index": "唯一指数",
+			"forex": "外汇",
+			"equities": "传统股票",
+			"crypto": "加密货币",
+			"commodity": "商品",
+			"short": "空头头寸"
+		},
+		"features": {
+			"title": "独特的交易功能",
+			"infinite-liquidity": {
+				"title": "无限流动性",
+				"copy": "所有交易都是点对点的,使用DEMAA协议的汇集流动性模型。这意味着没有交易对手匹配,交易者的流动性本质上是无限的。"
+			},
+			"zero-slippage": {
+				"title": "零滑点",
+				"copy": "无限流动性意味着交易者永远不必担心订单并受到滑点的影响。"
+			},
+			"synthetic-futures": {
+				"title": "合成期货",
+				"copy": "一旦期货建立在DEMAA协议上,它很快就会在Swap上得到支持,在非托管、无许可的平台上提供永久的期货合约。"
+			}
+		},
+		"l2": {
+			"title": "现在是 Optimism layer 2",
+			"copy": "Swap现在可用于 Optimism 的第 2 层解决方案,以实现<0>低gas费</0>和<0>快速交易</0>。像精英一样交易。",
+			"transaction-cost": "更低的gas费用*",
+			"transaction-speed": "交易速度*",
+			"disclaimer": "* 这些统计数据是近似值。用户体验会有所不同。",
+			"cta-buttons": {
+				"learn-more": "了解更多",
+				"switch-l2": "切换到 L2"
+			},
+			"markets": {
+				"title": "实时市场",
+				"copy": "现在在 Optimism layer 2 开始交易"
+			}
+		},
+		"benefits": {
+			"title": "没有中心化交易所的限制",
+			"peer-to-contract": {
+				"title": "点对点 (P2C) 交易",
+				"copy": "所有交易都是针对DEMAA智能合约执行的,因此交易者不必担心点对点交易模型的限制,例如流动性、滑点或订单簿。"
+			},
+			"trading-pair": {
+				"title": "无交易对限制",
+				"copy": "任何合成资产 都可以立即交易到任何其他合成资产,因此您不受交易所提供的任何交易对的限制,这是中心化交易所模型的必要限制。"
+			},
+			"permissionless": {
+				"title": "无权限和非托管",
+				"copy": "Swap是一个利用DEMAA协议的 dApp,这意味着无需创建账户,无需存款或取款,也无需放弃对您资金的保管。"
+			}
+		},
+		"steps": {
+			"title": "只需3步即可开始交易",
+			"one": {
+				"title": "你需要一个带有MATIC的web3钱包作为gas",
+				"subtitle": "第一步",
+				"copy": "Swap在Polygon区块链上,因此与polygon的所有其他dApp一样,您需要一个带有MATIC作为燃料的web3钱包来支付要处理的交易。流行的加密货币钱包类别包括硬件钱包、浏览器扩展钱包和手机钱包。"
+			},
+			"two": {
+				"title": "获取dUSD(或任何其他合成资产)",
+				"subtitle": "第二步",
+				"copy": "要开始交易,你需​​要一个Swap支持的合成资产衍生品,称为合成资产。"
+			},
+			"three": {
+				"title": "使用Swap交易全系列合成资产质押",
+				"subtitle": "第三步",
+				"copy": "一旦您拥有dUSD或任何其他合成资产,您就可以在整个合成资产 范围内进行交易,以制作多样化的资产组合,所有资产都在链上,并且无需向交易所交出托管！"
+			}
+		},
+		"faq": {
+			"title": "常见问题",
+			"tabs": {
+				"explainer-video": "解释视频",
+				"getting-started": {
+					"title": "开始使用",
+					"items": {
+						"qna1": {
+							"question": "什么是Polygon？",
+							"answer": "Polygon可以创建完全在线的基础设施,由庞大的网络管理和运行,这意味着没有人控制它,关闭它将非常困难（如果不是不可能的话）。这将其置于政府或其他当局的控制范围之外。Polygon是由一个比特币爱好者团队创建的,他们希望扩展其去中心化货币的设计以构建其他去中心化用例（'去中心化'意味着它不受中央控制权威）。Polygon区块链上有一个庞大的项目生态系统,所有项目都可以相互交互。"
+						},
+						"qna2": {
+							"question": "什么是 DeFi？",
+							"answer": "DeFi 代表去中心化金融,代表了polygon开放的金融工具、产品和协议的生态系统。Swap 和它所建立的DEMAA协议都是 DeFi 生态系统的一部分。DeFi 运行在智能合约上,这是Polygon区块链的一个关键特性。智能合约是根据编码方式执行或控制某些事件和动作的程序或协议。它们允许创建执行某些任务的去中心化基础设施:例如,支持借贷的智能合约将拥有锁定作为抵押品存入的资金的智能合约,并使用户能够以自己的抵押品借入其他资产。"
+						},
+						"qna3": {
+							"question": "什么是 dApp？",
+							"answer": "dApp代表去中心化应用程序。dApp 是提供访问区块链上开源协议的前端接口。如果底层协议是开放访问的,那么可以有多个dApp 为同一协议提供不同的接口。dApp 允许人们使用他们的加密货币钱包直接与智能合约交互,这意味着无需创建账户或进行存款或取款,因为用户永远不需要放弃对其资产的保管。"
+						}
+					}
+				},
+				"trading-on-Swap": {
+					"title": "掉期交易",
+					"items": {
+						"qna1": {
+							"question": "流动性从何而来？",
+							"answer": "Swap建立在DEMAA协议之上,因此合成资产 交易者可以在Swap上访问的流动性完全由DEMAA上的 DEM 质押者创建。"
+						},
+						"qna2": {
+							"question": "如果没有交易对手,交易如何运作？",
+							"answer": "DEMAA协议中的每笔交易都没有直接交易对手,但它确实使用了类似交易对手的模型,其中 DEM 质押者在铸造dUSD时承担DEMAA债务池的一部分。"
+						},
+						"qna3": {
+							"question": "gas费用是如何计算的？",
+							"answer": "交易成本与Polygon矿工处理它所需的处理能力成正比。"
+						}
+					}
+				}
+			}
+		},
+		"footer": {
+			"cta": {
+				"title": "开始交换",
+				"button": "查看交换"
+			}
+		}
+	},
+	"config":{
+		"browser-wallet":"浏览器钱包",
+		"ledger":"分类账簿",
+		"lattice":"格子木架",
+		"trezor":"拱顶",
+		"walletConnect":"连接钱包",
+		"imToken":"imToken",
+		"portis":"港口",
+		"gnosis":"灵知",
+		"trust":"相信",
+		"walletLink":"墙纸",
+		"torus":"环面",
+		"status":"地位",
+		"authereum":"其他",
+		"derivationPath":"派生路径",
+		"accounts":"账户",
+		"connect":"连接"
+	},
+	"exchange": {
+		"page-title": "兑换 | 兑换",
+		"page-title-currency-pair": "{{baseCurrencyKey}}/{{quoteCurrencyKey}} - {{rate}} | 兑换",
+		"currency-card": {
+			"wallet-balance": "钱包余额",
+			"currency-selector": {
+				"select-synth": "选择资产",
+				"select-token": "选择代币"
+			}
+		},
+		"market-details-card": {
+			"title": "市场详情",
+			"24h-vol": "24H 体量",
+			"24h-high": "24h 高",
+			"24h-low": "24h 低",
+			"market-cap": "市值",
+			"price-feed": "价格",
+			"opens-in": "开盘",
+			"closes-in": "收盘"
+		},
+		"price-chart-card": {
+			"compare": "比较",
+			"ratio": "比率",
+			"overlay-messages": {
+				"frozen": {
+					"title": "{{currencyKey}} 合成资产质押已被冻结",
+					"subtitle": "正在重置。"
+				},
+				"market-closure": {
+					"title": "{{currencyKey}} 市场已关闭",
+					"subtitle": "正在重置。",
+					"after-hours": "售后交易池可用 <linkTag>{{linkText}}</linkTag>",
+					"here": "这儿"
+				},
+				"system-upgrade": {
+					"title": "{{currencyKey}} 合成资产质押暂停",
+					"subtitle": "详情请查看 DEMAA Discord。"
+				},
+				"circuit-breaker": {
+					"title": "为 {{currencyKey}} 触发了断路器",
+					"subtitle": "重置中"
+				},
+				"emergency": {
+					"title": "为 {{currencyKey}} 激活了紧急关闭",
+					"subtitle": "重置中"
+				}
+			},
+			"tooltip": {
+				"close": "关闭",
+				"high": "高",
+				"low": "低",
+				"open": "打开",
+				"price": "价格"
+			},
+			"no-data": "无数据"
+		},
+		"summary-info": {
+			"gas-price-gwei": "gas价格 (GWEI)",
+			"fee": "费用",
+			"fee-cost": "费用成本",
+			"button": {
+				"approve": "批准",
+				"approving": "批准",
+				"c-ratio-too-low": "c-ratio 太低",
+				"fee-reclaim-period": "费用回收期",
+				"insufficient-balance": "余额不足",
+				"enter-amount": "输入金额",
+				"select-synth": "选择合成资产",
+				"select-token": "选择代币",
+				"submit-order": "提交订单",
+				"submitting-order": "提交订单...",
+				"submitting-approval": "提交审批...",
+				"approve-balancer": "批准平衡器合约",
+				"add-more-collateral": "添加更多抵押品"
+			}
+		},
+		"onboard": {
+			"message": "您的钱包没有合成资产。购买 <0>{{currencyKey}}</0> 以交易合成资产:",
+			"l2-message": "您的钱包没有合成资产。在 Staking 上铸币 <0>{{currencyKey}}</0> 以交易合成资产:",
+			"mint-button": "访问铸造"
+		},
+		"connect-wallet-card": {
+			"message": "连接你的钱包开始交易"
+		},
+		"footer-card": {
+			"market-closure": {
+				"button-label": "市场关闭",
+				"reasons": {
+					"frozen": {
+						"message": "{{currencyKey}} 合成资产质押已被冻结 - 正在重置。"
+					},
+					"market-closure": {
+						"message": "{{currencyKey}} 市场已关闭 - 正在进行重置。"
+					},
+					"system-upgrade": {
+						"message": "{{currencyKey}} 合成资产质押已暂停。请查看 DEMAA Discord 了解详情。"
+					},
+					"circuit-breaker": {
+						"message": "为 {{currencyKey}} 触发了断路器 - 正在进行重置。"
+					},
+					"emergency": {
+						"message": "为 {{currencyKey}} 激活了紧急关闭 - 正在进行重置。"
+					},
+					"both-synths-suspended": {
+						"message": "选定的合成资产质押当前已暂停 - 正在进行重置。"
+					},
+					"after-hours": {
+						"message": "证券交易所关闭。在 Balancer 下班后交易",
+						"button-label": "打开平衡池"
+					}
+				}
+			},
+			"get-l2-gas": {
+				"message": "没有足够的 L2 wETH 来支付交易费用。通过 Optimism Bridge 获取一些:"
+			}
+		},
+		"common": {
+			"from": "从",
+			"into": "到"
+		},
+		"errors": {
+			"fee-reclamation": "完成交易后有等待期。请等待大约 {{waitingPeriod}} 分钟再尝试兑换 {{currencyKey}}"
+		},
+		"charts": {
+			"single": "单",
+			"double": "双"
+		}
+	},
+	"dashboard": {
+		"page-title": "仪表板 | 兑换",
+		"trending": "行情",
+		"watchlist": {
+			"title": "观察列表"
+		},
+		"tabs": {
+			"nav": {
+				"synth-balances": "合成资产余额",
+				"convert": "合成资产质押入口",
+				"crypto-balances": "加密货币余额",
+				"transactions": "交易",
+				"deprecated": "弃用"
+			}
+		},
+		"onboard": {
+			"convert": "合成资产质押入口",
+			"title": "了解它是如何工作的",
+			"subtitle": "在Swap上启动并运行并交换一切。",
+			"learn-more": "了解更多",
+			"how-it-works-modal": {
+				"title": "它是如何工作的"
+			},
+			"convert-card": {
+				"slippage-selector": {
+					"title": "滑点"
+				}
+			}
+		},
+		"your-portfolio": {
+			"title": "你的资产集"
+		},
+		"synth-sort": {
+			"price": "价格",
+			"24h-vol": "24H 体量",
+			"24h-high": "24h 高",
+			"24h-low": "24h 低",
+			"24h-change": "24 小时变化"
+		},
+		"transactions": {
+			"synth-sort": {
+				"allSynths": "所有合成资产质押"
+			},
+			"order-type-sort": {
+				"allOrderTypes": "所有订单类型",
+				"market": "市价单",
+				"limit": "限价单"
+			},
+			"order-size-list":{
+				"all-sizes": "所有尺寸"
+			},
+			"table": {
+				"orderType": "订单类型",
+				"from": "从",
+				"to": "到",
+				"value": "价值",
+				"fee-reclaim": "费用回扣/回收",
+				"no-results": "没有找到交易",
+				"tx-reclaim-fee-hint": "如果+ve,则交易产生费用回扣。否则,费用被收回。",
+				"price-adjustment-hint": "价格调整正在进行中"
+			}
+		},
+		"fee-reclaiming-synths": {
+			"title": "进行中",
+			"row": {
+				"main-col-subtitle": "价格调整中",
+				"main-col-complete-subtitle": "调价完成",
+				"col-trades": "交易",
+				"col-debt-surplus": "债务/盈余",
+				"col-remaining": "剩余"
+			},
+			"settling-fee": "结算...",
+			"settle-fee": "结算费"
+		},
+		"deprecated": {
+			"info": "已弃用的合成资产质押可以随时以固定的兑换率兑换成 dUSD。",
+			"button": {
+				"default": "全部兑换",
+				"redeeming": "待定"
+			},
+			"susd-total": "dUSD 总计"
+		}
+	},
+	"shorting": {
+		"page-title": "做空 | 兑换",
+		"common": {
+			"collateral": "抵押品",
+			"posting": "发布",
+			"shorting": "做空",
+			"interestRate": "利率",
+			"cRatio": "抵押率"
+		},
+		"shorting-card": {
+			"summary-info": {
+				"button": {
+					"c-ratio-too-low": "抵押率太低",
+					"add-more-collateral": "添加更多抵押品",
+					"min-collateral": "最低抵押品为 <0>{{amount}}</0> <1>{{currencyKey}}</1>"
+				}
+			}
+		},
+		"c-ratio": {
+			"safe": "安全",
+			"safeMax": "最安全",
+			"highRisk": "高风险"
+		},
+		"stats": {
+			"title": "做空统计",
+			"table": {
+				"asset": "资产",
+				"apr": "年利率",
+				"open-interest": "未平仓合约",
+				"total": "总计"
+			}
+		},
+		"rewards": {
+			"title": "可获得的奖励",
+			"button": {
+				"claim": "认领",
+				"claiming": "认领中..."
+			},
+			"tx-confirm": {
+				"claiming": "认领中"
+			}
+		},
+		"history": {
+			"title": "你的仓位",
+			"assets-sort": {
+				"allAssets": "所有资产"
+			},
+			"dates-sort": {
+				"all-dates": "所有日期",
+				"past-week": "过去一周",
+				"past-month": "过去一个月",
+				"past-year": "过去一年"
+			},
+			"sizes-sort": {
+				"all-sizes": "所有规格"
+			},
+			"manage-short": {
+				"page-title": "做空 | 兑换",
+				"no-results": "未找到做空",
+				"title": "管理仓位 #{{loanId}}",
+				"close": "关闭",
+				"subtitle": "仓位详情",
+				"fields": {
+					"collateral": "抵押品",
+					"liquidation-price": "清算价格",
+					"profit-loss": "盈利/亏损",
+					"shorting": "做空",
+					"collateral-ratio": "抵押率",
+					"date": "开仓日期",
+					"interest-rate": "利率",
+					"accrued-interest": "应计利息"
+				},
+				"collateral-ratio-tooltip": {
+					"line1": "仓位有被平仓的风险",
+					"line2": "如果抵押率低于 {{percent}} 的最小值"
+				},
+				"interaction-disabled": {
+					"title": "操作借贷模块后有等待期。",
+					"message": {
+						"part1": "请稍等",
+						"part2": "在与它重新交互之前。"
+					}
+				},
+				"sections": {
+					"add-collateral": {
+						"nav-title": "添加抵押品",
+						"tx-confirm": {
+							"base-currency-label": "发布"
+						}
+					},
+					"remove-collateral": {
+						"nav-title": "移除抵押品",
+						"tx-confirm": {
+							"base-currency-label": "提现"
+						},
+						"button": {
+							"amount-greater-than-collateral": "金额大于抵押品"
+						}
+					},
+					"decrease-position": {
+						"nav-title": "减少仓位",
+						"tx-confirm": {
+							"base-currency-label": "减少头寸"
+						},
+						"button": {
+							"amount-greater-than-debt": "金额大于债务",
+							"close-position-instead": "平仓而非偿还"
+						}
+					},
+					"increase-position": {
+						"nav-title": "增加仓位",
+						"tx-confirm": {
+							"base-currency-label": "增加头寸"
+						}
+					},
+					"close-position": {
+						"nav-title": "平仓",
+						"tx-confirm": {
+							"quote-currency-label": "返回",
+							"base-currency-label": "接收"
+						},
+						"close-button-label": "平仓",
+						"total-to-replay-label": "总还款",
+						"button": {
+							"insufficient-balance-to-repay": "余额不足偿还"
+						}
+					},
+					"panel": {
+						"collateral": "抵押品",
+						"shorting": "做空",
+						"wallet-balance": "钱包余额"
+					}
+				}
+			},
+			"table": {
+				"id": "ID",
+				"date": "日期",
+				"shorting": "做空",
+				"collateral": "抵押品",
+				"liquidation-price": "清算价格",
+				"collateral-ratio": "抵押率",
+				"profit-loss": "盈利/亏损",
+				"no-results": "没有找到做空",
+				"accrued-interest": "应计利息"
+			}
+		}
+	},
+	"not-found": {
+		"page-title": "未找到 | 兑换",
+		"title": "404",
+		"subtitle": "找不到页面。"
+	},
+	"system-status": {
+		"page-title": "维护 | 兑换",
+		"title": "Swap目前正在维护中",
+		"subtitle": "给您带来的不便,我们深表歉意,很快就会回复。"
+	},
+	"modals": {
+		"select-currency": {
+			"title": "选择合成资产",
+			"header": {
+				"search-results": "搜索结果",
+				"category-synths": "{{category}} 合成资产",
+				"all-synths": "所有合成资产",
+				"your-synths": "你的合成资产",
+				"holdings": "持有"
+			},
+			"search": {
+				"placeholder": "搜索合成资产",
+				"empty-results": "未找到结果,请重试。"
+			}
+		},
+		"select-token": {
+			"title": "选择代币",
+			"header": {
+				"search-results": "搜索结果",
+				"all-tokens": "所有代币",
+				"holdings": "持有"
+			},
+			"search": {
+				"placeholder": "搜索标记",
+				"empty-results": "未找到结果,请重试。"
+			}
+		},
+		"select-short-currency": {
+			"title": "选择空头资产",
+			"header": {
+				"your-synths": "你的 <0>{{currencyKey}}</0> 余额"
+			}
+		},
+		"confirm-transaction": {
+			"title": "确认交易",
+			"confirm-with-provider": "通过您的钱包确认您的交易。",
+			"exchange-fee-hint": "<0>{{currencyKey}}</0> 的DEMAA协议交换费用。<1>合成资产 费用</1>",
+			"price-adjustment-hint": "本次交易有价格调整期。<0>了解详情。</0>"
+		},
+		"approve-transaction": {
+			"title": "批准交易",
+			"confirm-with-provider": "通过您的钱包确认您的交易。"
+		},
+		"afterHours": {
+			"title": "后市交易池",
+			"approve": "批准",
+			"balancer-pool": "Balancer 池",
+			"slippage-levels": {
+				"low": "低",
+				"medium": "中",
+				"high": "高"
+			},
+			"powered-by-balancer": "由 Balancer 提供",
+			"max-slippage-tolerance": "最大滑点容忍度",
+			"estimated-slippage": "估计滑点",
+			"confirm-text": "确认您与 web3 提供商的交易",
+			"notice-text": "在交易时间,我们根据 Chainlink 数据提供准确的价格。交易时间之后,您可以在 Balancer 上以当前价格进行交易。请注意潜在的价格偏差以及较大订单的滑点。"
+		},
+		"settings": {
+			"title": "设置",
+			"options": {
+				"currency": "货币",
+				"language": "语言"
+			}
+		},
+		"wallet": {
+			"title": "钱包选项"
+		},
+		"notifications": {
+			"title": "通知",
+			"fee-reclaiming-synths": {
+				"title": "手续费赎回"
+			},
+			"open-orders": {
+				"title": "未结订单",
+				"no-results": "没有未结订单"
+			},
+			"recent-notifications": {
+				"title": "最近的通知",
+				"no-results": "最近没有交易"
+			},
+			"deprecated-synths": {
+				"title": "不推荐使用的合成资产质押",
+				"description": "您的余额包括已弃用的合成资产质押,这些合成资产质押在赎回前将保持冻结状态。",
+				"short-description": "兑换已弃用的合成资产质押 ({{amount}} {{asset}})",
+				"button": {
+					"default": "兑换",
+					"redeeming": "赎回"
+				}
+			},
+			"all-notifications": {
+				"title": "所有通知",
+				"no-results": "无"
+			},
+			"view-all": "查看全部"
+		},
+		"deprecated-synths": {
+			"from": "从",
+			"to": "到"
+		}
+	},
+	"common": {
+		"order-type": {
+			"market": "市价单",
+			"limit": "限价单"
+		},
+		"currency": {
+			"currency-amount": "<0>{{currencyKey}}</0> 金额",
+			"exchange-fee": "交易费",
+			"currency-value": "<0>{{currencyKey}}</0> 值",
+			"estimated-currency-value": "<0>{{currencyKey}}</0> 交易值",
+			"currency-contract": "<0>{{currencyKey}}</0> 合约",
+			"currency-price": "<0>{{currencyKey}}</0> 价格",
+			"synthetic-currency-name": "DEMAA {{currencyName}}",
+			"trade-to-currency": "兑换到 <0>{{currencyKey}}</0>",
+			"buy-currency": "购买 <0>{{currencyKey}}</0>",
+			"get-currency": "获取 <0>{{currencyKey}}</0>",
+			"currency-exchange": "<0>{{orderType}}</0> <1>{{quoteCurrencyAmount}}</1> <2>{{quoteCurrencyKey}}</2> for <3>{{baseCurrencyAmount }}</3> <4>{{baseCurrencyKey}}</4>",
+			"swap-currency": "兑换 <0>{{currencyKey}}</0>",
+			"trade-into": "兑换成 <0>{{currencyKey}}</0>",
+			"price-adjustment": "价格调整",
+			"deprecated": "弃用"
+		},
+		"total-assets": "{{total}} 资产",
+		"total-results": "{{total}} 结果",
+		"currency-category": {
+			"crypto": "加密",
+			"forex": "外汇",
+			"commodity": "商品",
+			"equities": "股票"
+		},
+		"contract": "合约",
+		"search-results": "搜索结果",
+		"chart-periods": {
+			"4H": "4H",
+			"1D": "1D",
+			"1W": "1W",
+			"1M": "1M"
+		},
+		"chart-types": {
+			"compare": "比较",
+			"ratio": "比率",
+			"candlesticks": "烛线"
+		},
+		"transaction": {
+			"revert-reason": "错误:{{reason}}",
+			"error": "发生意外错误。",
+			"reattempt": "再试一次",
+			"transaction-sent": "您的交易已经发送到网络。",
+			"transaction-failed": "您的交易失败了",
+			"transaction-confirmed": "您的交易成功了！"
+		},
+		"price": "价格",
+		"asset": "资产",
+		"cancel": "取消",
+		"order-types": {
+			"market": "市价单",
+			"limit": "限价单"
+		},
+		"features": {
+			"coming-soon": "即将到来"
+		},
+		"wallet": {
+			"connect-wallet": "连接钱包",
+			"switch-wallet": "切换钱包",
+			"switch-accounts": "切换账户",
+			"disconnect-wallet": "断开钱包"
+		},
+		"tx-status": {
+			"waiting": "等待",
+			"open": "打开",
+			"closed": "关闭",
+			"closing": "收盘",
+			"in": "转入",
+			"out": "转出",
+			"complete": "完成",
+			"pending": "待定",
+			"confirmed": "已确认",
+			"cancelled": "取消",
+			"failed": "失败"
+		},
+		"switch": "切换",
+		"gas-prices": {
+			"average": "平均",
+			"fast": "快",
+			"fastest": "最快"
+		},
+		"custom": "自定义",
+		"edit": "编辑",
+		"powered-by": "提供",
+		"dex-aggregators": {
+			"1inch": {
+				"title": "DEX 聚合器 - 1inch.exchange"
+			},
+			"balancer": {
+				"title": "Balancer"
+			}
+		},
+		"totals": {
+			"total-synth-value": "总合成值",
+			"your-currencyKey-balance": "你的 <0>{{currencyKey}}</0> 余额"
+		},
+		"pagination": {
+			"page": "页面",
+			"page-of-total-pages": "{{page}} of {{totalPages}}"
+		},
+		"time": {
+			"years": "y",
+			"months": "mo",
+			"days": "d",
+			"hours": "h",
+			"minutes": "m",
+			"seconds": "s"
+		},
+		"min": "min"
+	}
+}

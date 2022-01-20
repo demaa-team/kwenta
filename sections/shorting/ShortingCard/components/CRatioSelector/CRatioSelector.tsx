@@ -99,6 +99,7 @@ export const CRatioSelector: FC<CRatioSelectorProps> = () => {
 
 const StyledSolidTooltip = styled(SolidTooltip)`
 	width: 130px;
+	box-shadow:0 0 5px 0 #a5a5a5;
 `;
 
 const Container = styled.div`

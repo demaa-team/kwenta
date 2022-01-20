@@ -154,8 +154,8 @@ const ChartCard: FC<ChartCardProps> = ({
 					)}
 				</ChartHeaderTop>
 				{!isMarketClosed && (
-					<Actions reverseChildren={alignRight}>
-						<PeriodSelector>
+					<ActionsCopy reverseChildren={alignRight}>
+						<PeriodSelector className="period-select">
 							{PERIOD_LABELS.map((period) => (
 								<StyledTextButton
 									key={period.period}
@@ -182,10 +182,10 @@ const ChartCard: FC<ChartCardProps> = ({
 								}}
 							/>
 						)}
-					</Actions>
+					</ActionsCopy>
 				)}
 			</ChartHeader>
-			<ChartBody>
+			<ChartBodyCopy>
 				<ChartData disabledInteraction={disabledInteraction}>
 					{isAreaChart ? (
 						<AreaChartData
@@ -240,7 +240,7 @@ const ChartCard: FC<ChartCardProps> = ({
 						<NoData>{t('exchange.price-chart-card.no-data')}</NoData>
 					) : undefined}
 				</AbsoluteCenteredDiv>
-			</ChartBody>
+			</ChartBodyCopy>
 		</Container>
 	);
 };
@@ -249,19 +249,26 @@ const Container = styled.div`
 	width: 100%;
 	position: relative;
 `;
-
+const ActionsCopy = styled(Actions)`
+	background:#182576;
+	padding-right:0.5rem;
+`;
+const ChartBodyCopy = styled(ChartBody)`
+	background:#182576
+`;
 const ChartHeader = styled.div`
 	display: block;
-	padding-bottom: 12px;
+	// padding-bottom: 12px;
 	position: relative;
 	top: 6px;
 `;
 
 const ChartHeaderTop = styled(FlexDivRowCentered)<{ alignRight?: boolean }>`
-	border-bottom: 1px solid #171a1d;
+	// border-bottom: 1px solid #171a1d;
 	justify-content: ${(props) => (props.alignRight ? 'flex-end' : 'flex-start')};
 	padding-bottom: 5px;
 	grid-gap: 20px;
+	padding-bottom:0.8rem;
 `;
 
 export default ChartCard;

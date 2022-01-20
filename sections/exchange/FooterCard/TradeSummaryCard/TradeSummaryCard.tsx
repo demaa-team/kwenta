@@ -113,7 +113,7 @@ const TradeSummaryCard: FC<TradeSummaryCardProps> = ({
 				showProvider={show1InchProvider}
 				{...rest}
 			>
-				{show1InchProvider && <PoweredBy1Inch />}
+				{/* {show1InchProvider && <PoweredBy1Inch />} */}
 				<DesktopOnlyView>{summaryItems}</DesktopOnlyView>
 				<ErrorTooltip
 					visible={feeReclaimPeriodInSeconds > 0}
@@ -134,6 +134,7 @@ const TradeSummaryCard: FC<TradeSummaryCardProps> = ({
 							disabled={isSubmissionDisabled}
 							onClick={onSubmit}
 							size="lg"
+							style={{marginTop:'10px',fontSize:'1rem'}}
 							data-testid="submit-order"
 						>
 							{isSubmissionDisabled

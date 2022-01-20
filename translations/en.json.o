@@ -4,7 +4,7 @@
         "en": "English"
 	},
 	"meta": {
-		"description": "Gain exposure to cryptocurrencies, forex, equities, indices, and commodities on Polygon with zero slippage",
+		"description": "Gain exposure to cryptocurrencies, forex, equities, indices, and commodities on Ethereum with zero slippage",
 		"og": {
 			"title": "Swap",
 			"site-name": "Swap"
@@ -39,7 +39,7 @@
 			"title": "Derivatives trading with zero slippage"
 		},
 		"assets": {
-			"title": "Trade real world assets and derivatives on Polygon",
+			"title": "Trade real world assets and derivatives on Ethereum",
 			"index": "Unique Indices",
 			"forex": "Forex",
 			"equities": "Traditional Equities",
@@ -51,7 +51,7 @@
 			"title": "Unique trading features",
 			"infinite-liquidity": {
 				"title": "Infinite liquidity",
-				"copy": "All trading is peer-to-contract, using the DEMAA protocol’s pooled liquidity model. This means no counterparty matching, and essentially infinite liquidity for traders."
+				"copy": "All trading is peer-to-contract, using the Synthetix protocol’s pooled liquidity model. This means no counterparty matching, and essentially infinite liquidity for traders."
 			},
 			"zero-slippage": {
 				"title": "Zero slippage",
@@ -59,7 +59,7 @@
 			},
 			"synthetic-futures": {
 				"title": "Synthetic futures",
-				"copy": "Once futures is built on the DEMAA protocol, it will soon be supported on Swap, offering perpetual future contracts on a non-custodial, permissionless platform."
+				"copy": "Once futures is built on the Synthetix protocol, it will soon be supported on Swap, offering perpetual future contracts on a non-custodial, permissionless platform."
 			}
 		},
 		"l2": {
@@ -81,7 +81,7 @@
 			"title": "Without the limits of a centralised exchange",
 			"peer-to-contract": {
 				"title": "Peer-to-contract (P2C) trading",
-				"copy": "All trades are executed against the DEMAA smart contracts, so traders don’t have to worry about the limitations of the peer-to-peer trading model, such as liquidity, slippage, or orderbooks."
+				"copy": "All trades are executed against the Synthetix smart contracts, so traders don’t have to worry about the limitations of the peer-to-peer trading model, such as liquidity, slippage, or orderbooks."
 			},
 			"trading-pair": {
 				"title": "No trading pair restrictions",
@@ -89,25 +89,25 @@
 			},
 			"permissionless": {
 				"title": "Permissionless and non-custodial",
-				"copy": "Swap is a dApp that leverages the DEMAA protocol, which means no creating an account, no deposits or withdrawals, and no surrendering custody of your funds."
+				"copy": "Swap is a dApp that leverages the Synthetix protocol, which means no creating an account, no deposits or withdrawals, and no surrendering custody of your funds."
 			}
 		},
 		"steps": {
 			"title": "Start trading in just 3 steps",
 			"one": {
-				"title": "You’ll need a web3 wallet with MATIC for gas",
+				"title": "You’ll need a web3 wallet with ETH for gas",
 				"subtitle": "Step One",
-				"copy": "Swap is on the Etherem blockchain, so like all other dApps on Polygon you’ll need a web3 wallet with MATIC in it as gas to pay for transactions to be processed. Popular cryptocurrency wallet categories include hardware wallets, browser extension wallets, and mobile wallets."
+				"copy": "Swap is on the Etherem blockchain, so like all other dApps on Ethereum you’ll need a web3 wallet with ETH in it as gas to pay for transactions to be processed. Popular cryptocurrency wallet categories include hardware wallets, browser extension wallets, and mobile wallets."
 			},
 			"two": {
-				"title": "Acquire dUSD (or any other Synth)",
+				"title": "Acquire sUSD (or any other Synth)",
 				"subtitle": "Step Two",
-				"copy": "To start trading, you’ll need a synthetic asset derivative supported by Swap, known as Synths."
+				"copy": "To start trading, you’ll need a synthetic asset derivative supported by Swap, known as Synths. The most accessible Synth is sUSD, which can be purchased on dApps such as Uniswap, Curve, or 1inch."
 			},
 			"three": {
 				"title": "Use Swap to trade the full range of Synths",
 				"subtitle": "Step Three",
-				"copy": "Once you’ve got dUSD or any other Synth, you can trade between the entire range of Synths to craft a diverse portfolio of assets, all on-chain and without surrendering custody to an exchange!"
+				"copy": "Once you’ve got sUSD or any other Synth, you can trade between the entire range of Synths to craft a diverse portfolio of assets, all on-chain and without surrendering custody to an exchange!"
 			}
 		},
 		"faq": {
@@ -118,12 +118,12 @@
 					"title": "Getting started",
 					"items": {
 						"qna1": {
-							"question": "What is Polygon?",
-							"answer": "Polygon enables the creation of infrastructure that can exist entirely online, managed and run by a vast network of people, meaning that no-one controls it and it would be extremely difficult (if not impossible) to shut down. This puts it out of the reach of governments or other authorities."
+							"question": "What is Ethereum?",
+							"answer": "Ethereum enables the creation of infrastructure that can exist entirely online, managed and run by a vast network of people, meaning that no-one controls it and it would be extremely difficult (if not impossible) to shut down. This puts it out of the reach of governments or other authorities.  Ethereum was created by a team of Bitcoin enthusiasts, who wanted to expand on its design of decentralized money to build out other decentralized use cases (‘decentralized’ means it’s not controlled by a central authority). There is a huge ecosystem of projects on the Ethereum blockchain, all of which can interact with each other."
 						},
 						"qna2": {
 							"question": "What is DeFi?",
-							"answer": "DeFi stands for decentralised finance, and represents an ecosystem of open financial tools, products, and protocols on Polygon. Both Swap and the DEMAA protocol that it’s built on are part of the DeFi ecosystem. DeFi runs on smart contracts, which are a key feature of the Polygon blockchain. Smart contracts are programs or protocols that execute or control certain events and actions according to however they’re coded. They allow for the creation of decentralised infrastructure that carries out certain tasks: for example, a smart contract that enables lending and borrowing will have smart contracts that lock funds that are deposited as collateral and enable users to borrow other assets against their own collateral."
+							"answer": "DeFi stands for decentralised finance, and represents an ecosystem of open financial tools, products, and protocols on Ethereum. Both Swap and the Synthetix protocol that it’s built on are part of the DeFi ecosystem. DeFi runs on smart contracts, which are a key feature of the Ethereum blockchain. Smart contracts are programs or protocols that execute or control certain events and actions according to however they’re coded. They allow for the creation of decentralised infrastructure that carries out certain tasks: for example, a smart contract that enables lending and borrowing will have smart contracts that lock funds that are deposited as collateral and enable users to borrow other assets against their own collateral."
 						},
 						"qna3": {
 							"question": "What’s a dApp?",
@@ -136,15 +136,15 @@
 					"items": {
 						"qna1": {
 							"question": "Where does the liquidity come from?",
-							"answer": "Swap is built on the DEMAA protocol, so the Synth liquidity traders can access on Swap is entirely created by DEM stakers on DEMAA."
+							"answer": "Swap is built on the Synthetix protocol, so the Synth liquidity traders can access on Swap is entirely created by DEM stakers on Synthetix."
 						},
 						"qna2": {
 							"question": "How does trading work if there are no counterparties?",
-							"answer": "There are no direct counterparties for each trade in the DEMAA protocol, but it does use a counterparty-like model in which DEM stakers assume a proportion of the DEMAA debt pool when they mint dUSD."
+							"answer": "There are no direct counterparties for each trade in the Synthetix protocol, but it does use a counterparty-like model in which DEM stakers assume a proportion of the Synthetix debt pool when they mint sUSD. For more details, see the Synthetix <0>litepaper</0>."
 						},
 						"qna3": {
 							"question": "How are the gas costs calculated?",
-							"answer": "Transactions cost a certain amount proportional to how much processing power is required for Polygon miners to process it. Swap uses the DEMAA protocol, which is far more complex than the majority of other Polygon projects, so its transactions require more gas to be executed."
+							"answer": "Transactions cost a certain amount proportional to how much processing power is required for Ethereum miners to process it. Swap uses the Synthetix protocol, which is far more complex than the majority of other Ethereum projects, so its transactions require more gas to be executed."
 						}
 					}
 				}
@@ -156,24 +156,6 @@
 				"button": "View Exchange"
 			}
 		}
-	},
-	"config":{
-		"browser-wallet":"Browser Wallet",
-		"ledger":"ledger",
-		"lattice":"lattice",
-		"trezor":"trezor",
-		"walletConnect":"walletConnect",
-		"imToken":"imToken",
-		"portis":"portis",
-		"gnosis":"gnosis",
-		"trust":"trust",
-		"walletLink":"walletLink",
-		"torus":"torus",
-		"status":"status",
-		"authereum":"authereum",
-		"derivationPath":"derivationPath",
-		"accounts":"accounts",
-		"connect":"connect"
 	},
 	"exchange": {
 		"page-title": "Exchange | Swap",
@@ -211,7 +193,7 @@
 				},
 				"system-upgrade": {
 					"title": "{{currencyKey}} synth paused",
-					"subtitle": "Please check the DEMAA Discord for details."
+					"subtitle": "Please check the Synthetix Discord for details."
 				},
 				"circuit-breaker": {
 					"title": "Circuit breaker triggered for {{currencyKey}}",
@@ -270,7 +252,7 @@
 						"message": "{{currencyKey}} market has been closed - reset in progress."
 					},
 					"system-upgrade": {
-						"message": "{{currencyKey}} synth paused. Please check the DEMAA Discord for details."
+						"message": "{{currencyKey}} synth paused. Please check the Synthetix Discord for details."
 					},
 					"circuit-breaker": {
 						"message": "Circuit breaker triggered for {{currencyKey}} - reset in progress."
@@ -351,9 +333,6 @@
 				"market": "Market",
 				"limit": "Limit"
 			},
-			"order-size-list":{
-				"all-sizes": "All Sizes"
-			},
 			"table": {
 				"orderType": "Order Type",
 				"from": "From",
@@ -378,12 +357,12 @@
 			"settle-fee": "Settle fee"
 		},
 		"deprecated": {
-			"info": "Deprecated synths can be exchanged for dUSD at any time at the fixed redemption rate.",
+			"info": "Deprecated synths can be exchanged for sUSD at any time at the fixed redemption rate.",
 			"button": {
 				"default": "Redeem All",
 				"redeeming": "Pending"
 			},
-			"susd-total": "dUSD Total"
+			"susd-total": "sUSD Total"
 		}
 	},
 	"shorting": {
@@ -579,7 +558,7 @@
 		"confirm-transaction": {
 			"title": "confirm transaction",
 			"confirm-with-provider": "Confirm your transaction through your wallet.",
-			"exchange-fee-hint": "The DEMAA protocol exchange fee for <0>{{currencyKey}}</0>. <1>Synth Fees</1>",
+			"exchange-fee-hint": "The Synthetix protocol exchange fee for <0>{{currencyKey}}</0>. <1>Synth Fees</1>",
 			"price-adjustment-hint": "This transaction is subject to a price adjustment period. <0>Learn more.</0>"
 		},
 		"approve-transaction": {

@@ -56,7 +56,8 @@ const StyledDialogOverlay = styled(DialogOverlay)`
 const StyledDialogContent = styled(DialogContent)`
 	padding: 0;
 	border: 0;
-	background: none;
+	border-radius:1rem;
+	background:none;
 	${media.lessThan('sm')`
 		&&& {		
 			width: 100%;
@@ -67,7 +68,9 @@ const StyledDialogContent = styled(DialogContent)`
 `;
 
 const StyledCard = styled(Card)`
-	height: 100%;
+	// height: 100%;
+	background: #203298;
+	border-radius:1rem;
 `;
 
 const StyledCardHeader = styled(Card.Header)`

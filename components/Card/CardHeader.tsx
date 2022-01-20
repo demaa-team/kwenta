@@ -21,6 +21,7 @@ const Container = styled(FlexDivCentered)<{ lowercase: boolean }>`
 	border-bottom: 1px solid ${(props) => props.theme.colors.navy};
 	height: 32px;
 	padding: 0 18px;
+	width:100%;
 	justify-content: flex-start;
 	text-transform: ${(props) => (props.lowercase ? 'none' : 'capitalize')};
 	font-family: ${(props) => props.theme.fonts.bold};

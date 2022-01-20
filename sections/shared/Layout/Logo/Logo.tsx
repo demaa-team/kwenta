@@ -15,16 +15,16 @@ type LogoProps = {
 const Logo: FC<LogoProps> = ({ isL2 }) => (
 	<LogoContainer>
 		<Link href={ROUTES.Homepage.Home}>
-			<a>{isL2 ? <Img src={LogoSvgL2} /> : <img className='logo' src={LogoPng} />}</a>
+			<a>{isL2 ? <Img src={LogoSvgL2} /> : <Img className='logo' src={LogoPng} />}</a>
 		</Link>
 	</LogoContainer>
 );
 
 const LogoContainer = styled.div`
 	position: relative;
-	padding-top: 22px;
-	padding-left: 34px;
-	height: 70px;
+	padding-top: 1.1rem;
+	padding-left: 1.7rem;
+	height: 3.5rem;
 	border-bottom: 2px solid rgba(111, 119, 193, 0.3);
 	/* a {
 		position: relative;
@@ -33,8 +33,8 @@ const LogoContainer = styled.div`
 		display: inline-block;
 	} */
 	.logo{
-		width:147px;
-		height: 34px;
+		width:7.3rem;
+		height: 1.7rempx;
 	}
 `;
 

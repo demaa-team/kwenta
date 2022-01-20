@@ -4,7 +4,7 @@ import { DEFAULT_WIDE_WIDTH } from 'sections/exchange/TradeCard/constants';
 const useChartWideWidth = () => {
 	const [width, setWidth] = useState(DEFAULT_WIDE_WIDTH);
 	useEffect(() => {
-		setWidth(window.innerWidth - 100);
+		setWidth(window.innerWidth - window.innerWidth*17.5 / 96);
 	}, []);
 	return width;
 };

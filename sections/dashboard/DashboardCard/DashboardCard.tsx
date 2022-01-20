@@ -83,7 +83,7 @@ const DashboardCard: FC = () => {
 			? tabQuery
 			: synthBalances?.balances.length || isL2
 			? Tab.SynthBalances
-			: Tab.Convert;
+			: Tab.SynthBalances;
 
 	const TABS = useMemo(
 		() => [
@@ -93,16 +93,16 @@ const DashboardCard: FC = () => {
 				active: activeTab === Tab.SynthBalances,
 				onClick: () => router.push(ROUTES.Dashboard.SynthBalances),
 			},
-			...(!isL2
-				? [
-						{
-							name: Tab.Convert,
-							label: t('dashboard.tabs.nav.convert'),
-							active: activeTab === Tab.Convert,
-							onClick: () => router.push(ROUTES.Dashboard.Convert),
-						},
-				  ]
-				: []),
+			// ...(!isL2
+			// 	? [
+			// 			{
+			// 				name: Tab.Convert,
+			// 				label: t('dashboard.tabs.nav.convert'),
+			// 				active: activeTab === Tab.Convert,
+			// 				onClick: () => router.push(ROUTES.Dashboard.Convert),
+			// 			},
+			// 	  ]
+			// 	: []),
 			{
 				name: Tab.Transactions,
 				label: t('dashboard.tabs.nav.transactions'),
@@ -156,11 +156,11 @@ const DashboardCard: FC = () => {
 					exchangeRates={exchangeRates}
 				/>
 			</TabPanel>
-			<TabPanel name={Tab.Convert} activeTab={activeTab}>
+			{/* <TabPanel name={Tab.Convert} activeTab={activeTab}>
 				<ConvertContainer>
 					<CurrencyConvertCard />
 				</ConvertContainer>
-			</TabPanel>
+			</TabPanel> */}
 			<TabPanel name={Tab.Transactions} activeTab={activeTab}>
 				<Transactions />
 			</TabPanel>

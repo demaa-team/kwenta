@@ -96,6 +96,7 @@ export const SlippageSelector: FC<SlippageSelectorProps> = () => {
 
 const StyledSolidTooltip = styled(SolidTooltip)`
 	width: 130px;
+	box-shadow:0 0 5px 0 #a5a5a5;
 `;
 
 const Container = styled.div`
@@ -106,7 +107,7 @@ const Container = styled.div`
 
 const Label = styled.div`
 	color: ${(props) => props.theme.colors.silver};
-	font-size:18px;
+	font-size:0.9rem;
 	text-align: left;
 `;
 

@@ -102,10 +102,8 @@ const TrendingSynths: FC = () => {
 				);
 			}
 		}
-
-		return unfrozenSynths;
+		return unfrozenSynths.filter((v)=>!(v.name as String == 'iETH'));
 	}, [unfrozenSynths, currentSynthSort, exchangeRates, historicalVolume, historicalRates]);
-
 	return (
 		<>
 			<Container>
@@ -125,7 +123,7 @@ const TrendingSynths: FC = () => {
 				</TitleSortContainer>
 			</Container>
 			<Rows>
-				{sortedSynths.map((synth: Synth) => {
+				{sortedSynths.filter((v)=>!(v.name as String == 'iETH')).map((synth: Synth) => {
 					const price = exchangeRates && exchangeRates[synth.name];
 					return <SynthRow key={synth.name} synth={synth} price={price?.toNumber() ?? 0} />;
 				})}

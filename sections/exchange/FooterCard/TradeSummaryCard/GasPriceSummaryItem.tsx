@@ -180,7 +180,8 @@ export const StyledGasEditButton = styled.span`
 	font-family: ${(props) => props.theme.fonts.bold};
 	padding-left: 5px;
 	cursor: pointer;
-	color: ${(props) => props.theme.colors.goldColors.color3};
+	font-weight:bold;
+	// color: ${(props) => props.theme.colors.goldColors.color3};
 	text-transform: uppercase;
 `;
 

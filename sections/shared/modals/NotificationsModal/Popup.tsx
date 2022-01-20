@@ -119,6 +119,9 @@ const StyledMenuModal = styled(MenuModal)`
 	[data-reach-dialog-content] {
 		width: 400px;
 	}
+	display:flex;
+	align-item:center;
+	justify-content: center;
 	.card-body {
 		padding: 8px 0 16px 0;
 	}

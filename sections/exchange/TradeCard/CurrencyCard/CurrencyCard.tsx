@@ -162,13 +162,13 @@ const StyledCard = styled(Card)<{ interactive?: boolean }>`
 `;
 
 const StyledCardBody = styled(Card.Body)`
-	padding: 11px 30px;
+	padding: 1.5rem;
 `;
 
 const LabelContainer = styled.div`
 	padding-bottom: 2px;
 	text-transform: capitalize;
-	font-size: 18px;
+	font-size: 0.9rem;
 	font-family: Microsoft YaHei;
 	font-weight: 400;
 	color: #F86C29;
@@ -189,10 +189,10 @@ const CurrencySelector = styled.div<{
 	align-items: center;
 	grid-auto-flow: column;
 	grid-gap: 9px;
-	margin-right: 20px;
-	font-size: 24px;
+	margin-right: 1rem;
+	font-size: 1.2rem;
 	padding: 4px 10px;
-	margin-left: -10px;
+	margin-left: -0.5rem;
 	font-family: ${(props) => props.theme.fonts.bold};
 	color: ${(props) => props.theme.colors.white};
 	svg {
@@ -262,7 +262,7 @@ const WalletBalanceContainer = styled(FlexDivRowCentered)<{ disableInput?: boole
 const WalletBalanceLabel = styled.div`
 	text-transform: capitalize;
 	font-family: ${(props) => props.theme.fonts.bold};
-	font-size:18px;
+	font-size:0.9rem;
 	color: #F86C29;
 `;
 

@@ -70,11 +70,10 @@ const useConnector = () => {
 
 			const provider = loadProvider({
 				networkId,
-				infuraId: process.env.NEXT_PUBLIC_INFURA_PROJECT_ID,
+				// infuraId: process.env.NEXT_PUBLIC_INFURA_PROJECT_ID,
 				provider: window.ethereum,
 			});
 			const useOvm = getIsOVM(networkId);
-
 			const snxjs = synthetix({ provider, networkId, useOvm });
 
 			// @ts-ignore
@@ -102,7 +101,6 @@ const useConnector = () => {
 						});
 						const signer = provider.getSigner();
 						const useOvm = getIsOVM(networkId);
-
 						const snxjs = synthetix({ provider, networkId, signer, useOvm });
 
 						onboard.config({ networkId });
@@ -128,7 +126,6 @@ const useConnector = () => {
 						const network = await provider.getNetwork();
 						const networkId = network.chainId as NetworkId;
 						const useOvm = getIsOVM(networkId);
-
 						const snxjs = synthetix({ provider, networkId, signer: provider.getSigner(), useOvm });
 
 						setProvider(provider);
@@ -174,6 +171,7 @@ const useConnector = () => {
 			if (onboard) {
 				onboard.walletReset();
 				const success = await onboard.walletSelect();
+				debugger
 				if (success) {
 					await onboard.walletCheck();
 					resetCachedUI();
