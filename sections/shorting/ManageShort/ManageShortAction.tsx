@@ -144,7 +144,6 @@ const ManageShortAction: FC<ManageShortActionProps> = ({
 	const balance = synthsWalletBalancesQuery.data?.balancesMap[currencyKey]?.balance ?? null;
 
 	const inputAmountBN = wei(inputAmount || 0);
-
 	const redirectToShortingHome = useCallback(() => router.push(ROUTES.Shorting.Home), [router]);
 
 	const getMethodAndParams = useCallback(() => {

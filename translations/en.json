@@ -100,14 +100,14 @@
 				"copy": "Swap is on the Etherem blockchain, so like all other dApps on Polygon you’ll need a web3 wallet with MATIC in it as gas to pay for transactions to be processed. Popular cryptocurrency wallet categories include hardware wallets, browser extension wallets, and mobile wallets."
 			},
 			"two": {
-				"title": "Acquire dUSD (or any other Synth)",
+				"title": "Acquire sUSD (or any other Synth)",
 				"subtitle": "Step Two",
 				"copy": "To start trading, you’ll need a synthetic asset derivative supported by Swap, known as Synths."
 			},
 			"three": {
 				"title": "Use Swap to trade the full range of Synths",
 				"subtitle": "Step Three",
-				"copy": "Once you’ve got dUSD or any other Synth, you can trade between the entire range of Synths to craft a diverse portfolio of assets, all on-chain and without surrendering custody to an exchange!"
+				"copy": "Once you’ve got sUSD or any other Synth, you can trade between the entire range of Synths to craft a diverse portfolio of assets, all on-chain and without surrendering custody to an exchange!"
 			}
 		},
 		"faq": {
@@ -140,7 +140,7 @@
 						},
 						"qna2": {
 							"question": "How does trading work if there are no counterparties?",
-							"answer": "There are no direct counterparties for each trade in the DEMAA protocol, but it does use a counterparty-like model in which DEM stakers assume a proportion of the DEMAA debt pool when they mint dUSD."
+							"answer": "There are no direct counterparties for each trade in the DEMAA protocol, but it does use a counterparty-like model in which DEM stakers assume a proportion of the DEMAA debt pool when they mint sUSD."
 						},
 						"qna3": {
 							"question": "How are the gas costs calculated?",
@@ -176,8 +176,8 @@
 		"connect":"connect"
 	},
 	"exchange": {
-		"page-title": "Exchange | Swap",
-		"page-title-currency-pair": "{{baseCurrencyKey}}/{{quoteCurrencyKey}} - {{rate}} | Swap",
+		"page-title": "DEMAA | Exchange",
+		"page-title-currency-pair": "{{baseCurrencyKey}}/{{quoteCurrencyKey}} - {{rate}} | DEMAA",
 		"currency-card": {
 			"wallet-balance": "wallet balance",
 			"currency-selector": {
@@ -304,7 +304,7 @@
 		}
 	},
 	"dashboard": {
-		"page-title": "Dashboard | Swap",
+		"page-title": "DEMAA | Dashboard",
 		"trending": "Trending",
 		"watchlist": {
 			"title": "Watchlist"
@@ -378,16 +378,16 @@
 			"settle-fee": "Settle fee"
 		},
 		"deprecated": {
-			"info": "Deprecated synths can be exchanged for dUSD at any time at the fixed redemption rate.",
+			"info": "Deprecated synths can be exchanged for sUSD at any time at the fixed redemption rate.",
 			"button": {
 				"default": "Redeem All",
 				"redeeming": "Pending"
 			},
-			"susd-total": "dUSD Total"
+			"susd-total": "sUSD Total"
 		}
 	},
 	"shorting": {
-		"page-title": "Shorting | Swap",
+		"page-title": "DEMAA | Shorting",
 		"common": {
 			"collateral": "collateral",
 			"posting": "posting",
@@ -443,7 +443,7 @@
 				"all-sizes": "All Sizes"
 			},
 			"manage-short": {
-				"page-title": "Shorting | Swap",
+				"page-title": "DEMAA | Shorting",
 				"no-results": "Short not found",
 				"title": "Manage Position #{{loanId}}",
 				"close": "Close",
@@ -534,12 +534,12 @@
 		}
 	},
 	"not-found": {
-		"page-title": "Not Found | Swap",
+		"page-title": "DEMAA | Not Found",
 		"title": "404",
 		"subtitle": "Page not found."
 	},
 	"system-status": {
-		"page-title": "Maintenance | Swap",
+		"page-title": "DEMAA | Maintenance",
 		"title": "Swap is currently down for maintenance",
 		"subtitle": "We apologise for any inconvenience caused, it will be back shortly."
 	},

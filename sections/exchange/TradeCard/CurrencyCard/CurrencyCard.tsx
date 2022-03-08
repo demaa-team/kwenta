@@ -14,13 +14,13 @@ import Card from 'components/Card';
 import NumericInput from 'components/Input/NumericInput';
 import Loader from 'components/Loader';
 
-import { FlexDivRowCentered, numericValueCSS, CapitalizedText } from 'styles/common';
-
+import { FlexDivRowCentered,FlexDivCol, FlexDivCentered,numericValueCSS, CapitalizedText } from 'styles/common';
+import useMarketClosed from 'hooks/useMarketClosed';
 import { Side } from '../types';
 import useSelectedPriceCurrency from 'hooks/useSelectedPriceCurrency';
 import { TxProvider } from 'sections/shared/modals/TxConfirmationModal/TxConfirmationModal';
 import Wei, { wei } from '@synthetixio/wei';
-
+import Currency from 'components/Currency';
 type CurrencyCardProps = {
 	side: Side;
 	currencyKey: string | null;
@@ -72,7 +72,6 @@ const CurrencyCard: FC<CurrencyCardProps> = ({
 	const amountBN = useMemo(() => (amount === '' ? zeroBN : wei(amount)), [amount]);
 
 	const insufficientBalance = !isBase && hasWalletBalance ? amountBN.gt(walletBalance!) : false;
-
 	let tradeAmount = priceRate ? amountBN.mul(priceRate) : null;
 	if (selectPriceCurrencyRate != null && tradeAmount != null) {
 		tradeAmount = getPriceAtCurrentRate(tradeAmount);
@@ -80,7 +79,6 @@ const CurrencyCard: FC<CurrencyCardProps> = ({
 
 	const currencyKeySelected = currencyKey != null;
 	const hasCurrencySelectCallback = onCurrencySelect != null;
-
 	return (
 		<StyledCard
 			className={`currency-card currency-card-${side}`}
@@ -88,7 +86,7 @@ const CurrencyCard: FC<CurrencyCardProps> = ({
 			{...rest}
 		>
 			<StyledCardBody className="currency-card-body">
-				<LabelContainer data-testid="destination">{label}</LabelContainer>
+				{/* <LabelContainer data-testid="destination">{label}</LabelContainer> */}
 				<CurrencyWalletBalanceContainer className="currency-wallet-container">
 					<CurrencyContainer className="currency-container">
 						<CurrencySelector
@@ -97,14 +95,15 @@ const CurrencyCard: FC<CurrencyCardProps> = ({
 							role="button"
 							data-testid="currency-selector"
 						>
-							{currencyKey ?? (
+							{currencyKey ?
+								<CurrencySelectorText><Currency.Icon className="icon" {...{ currencyKey}} /><span style={{padding:"0 0.5rem"}}>{currencyKey}</span> </CurrencySelectorText> : (
 								<CapitalizedText>
 									{txProvider === '1inch'
 										? t('exchange.currency-card.currency-selector.select-token')
 										: t('exchange.currency-card.currency-selector.select-synth')}
 								</CapitalizedText>
 							)}{' '}
-							{hasCurrencySelectCallback && <Svg src={CaretDownIcon} />}
+							{hasCurrencySelectCallback && <Svg style={{marginLeft:'10px',background:'#1A2479',borderRadius:'50%',padding:'5px',width:'26px',height:'26px'}} src={CaretDownIcon} />}
 						</CurrencySelector>
 						{currencyKeySelected && (
 							<CurrencyAmountContainer
@@ -136,7 +135,8 @@ const CurrencyCard: FC<CurrencyCardProps> = ({
 							</CurrencyAmountContainer>
 						)}
 					</CurrencyContainer>
-					<WalletBalanceContainer disableInput={disableInput}>
+					{currencyKeySelected&&(
+						<WalletBalanceContainer disableInput={disableInput}>
 						<WalletBalanceLabel>{t('exchange.currency-card.wallet-balance')}</WalletBalanceLabel>
 						<WalletBalance
 							onClick={hasWalletBalance ? onBalanceClick : undefined}
@@ -147,6 +147,7 @@ const CurrencyCard: FC<CurrencyCardProps> = ({
 							{hasWalletBalance ? formatCurrency(currencyKey, walletBalance) : NO_VALUE}
 						</WalletBalance>
 					</WalletBalanceContainer>
+					)}
 				</CurrencyWalletBalanceContainer>
 			</StyledCardBody>
 		</StyledCard>
@@ -154,6 +155,7 @@ const CurrencyCard: FC<CurrencyCardProps> = ({
 };
 
 const StyledCard = styled(Card)<{ interactive?: boolean }>`
+width:100%
 	${(props) =>
 		!props.interactive &&
 		css`
@@ -162,7 +164,8 @@ const StyledCard = styled(Card)<{ interactive?: boolean }>`
 `;
 
 const StyledCardBody = styled(Card.Body)`
-	padding: 1.5rem;
+	padding: 0 1.5rem;
+	width:100%;
 `;
 
 const LabelContainer = styled.div`
@@ -176,23 +179,27 @@ const LabelContainer = styled.div`
 
 const CurrencyWalletBalanceContainer = styled.div``;
 
-const CurrencyContainer = styled(FlexDivRowCentered)`
+const CurrencyContainer = styled(FlexDivCol)`
 	padding-bottom: 6px;
 `;
 
-const CurrencySelector = styled.div<{
+const CurrencySelectorText = styled(FlexDivCentered)`
+`
+
+const CurrencySelector = styled(FlexDivCentered)<{
 	currencyKeySelected: boolean;
 	onClick: ((event: MouseEvent<HTMLDivElement, MouseEvent>) => void) | undefined;
 	interactive?: boolean;
 }>`
-	display: grid;
-	align-items: center;
-	grid-auto-flow: column;
-	grid-gap: 9px;
+	display: flex;
+	// align-items: center;
+	// grid-auto-flow: column;
+	// grid-gap: 9px;
 	margin-right: 1rem;
 	font-size: 1.2rem;
 	padding: 4px 10px;
-	margin-left: -0.5rem;
+	margin-bottom:1rem;
+	// margin-left: -0.5rem;
 	font-family: ${(props) => props.theme.fonts.bold};
 	color: ${(props) => props.theme.colors.white};
 	svg {
@@ -204,6 +211,7 @@ const CurrencySelector = styled.div<{
 		!props.currencyKeySelected &&
 		css`
 			margin: 12px 6px 12px -10px;
+			justify-content: center;
 		`};
 
 	${(props) =>
@@ -219,7 +227,7 @@ const CurrencySelector = styled.div<{
 
 const CurrencyAmountContainer = styled.div<{ disableInput?: boolean }>`
 	background-color: ${(props) => props.theme.colors.black};
-	border-radius: 4px;
+	border-radius: 16px;
 	width: 100%;
 	position: relative;
 	${(props) =>
@@ -232,12 +240,14 @@ const CurrencyAmountContainer = styled.div<{ disableInput?: boolean }>`
 const CurrencyAmount = styled(NumericInput)`
 	font-size: 16px;
 	border: 0;
-	height: 30px;
+	border-radius: 16px;
+	// height: 30px;
+	padding:0.5rem 1.5rem;
 `;
 
 const CurrencyAmountValue = styled.div`
 	${numericValueCSS};
-	padding: 0px 8px 2px 8px;
+	padding:0 1.5rem 0.5rem;
 	font-size: 10px;
 	width: 150px;
 	overflow: hidden;

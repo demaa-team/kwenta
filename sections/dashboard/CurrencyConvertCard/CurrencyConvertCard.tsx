@@ -23,30 +23,50 @@ const CurrencyConvertCard: FC = () => {
 
 	return (
 		<Container>
-			<ExchangeCardsWithSelector>
-				{quoteCurrencyCard}
-				{baseCurrencyCard}
+			<DesktopCardsContainerCopy>
+				<Left>
+					{quoteCurrencyCard}
+				</Left>
 				<StyledCurrencyCardsSelector>
 					<SlippageSelector />
 				</StyledCurrencyCardsSelector>
-			</ExchangeCardsWithSelector>
+				<Right>
+					{baseCurrencyCard}
+				</Right>
+			</DesktopCardsContainerCopy>
 			<ExchangeFooter>{footerCard}</ExchangeFooter>
 		</Container>
 	);
 };
-
+const Left = styled.div`
+	width:45%;	
+`
+const Right = styled.div`
+	width:45%;	
+`
 const Container = styled.div`
 	position: relative;
 `;
-
-const StyledCurrencyCardsSelector = styled(CurrencyCardsSelector)`
+const DesktopCardsContainerCopy = styled.div`
+	display: flex;
+	align-items: center;
+    justify-content: space-between;
+	padding: 2px 4.5rem;
+	flex: 1;
+`;
+const StyledCurrencyCardsSelector = styled.div`
+	border-left: 2px solid ${(props) => props.theme.colors.black};
+	border-right: 2px solid ${(props) => props.theme.colors.black};
+	display: flex;
+	align-items: center;
+	justify-content:center;
 	max-width: 260px;
 	width: 18%;
-	top:50%;
 	height: 5rem;
 `;
 
 export const ExchangeFooter = styled.div`
+	padding:1rem 0;
 	.footer-card {
 		/* max-width: 1000px; */
 	}

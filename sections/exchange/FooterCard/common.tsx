@@ -2,15 +2,18 @@ import styled, { css } from 'styled-components';
 
 import Button from 'components/Button';
 
-import { FixedFooterMixin, GridDivCentered, numericValueCSS } from 'styles/common';
+import { FixedFooterMixin,FlexDivRowCentered, GridDivCentered, numericValueCSS } from 'styles/common';
 import media from 'styles/media';
 
 import { zIndex } from 'constants/ui';
 
-export const SummaryItems = styled.div<{ attached?: boolean }>`
-	display: grid;
-	grid-auto-flow: column;
-	flex-grow: 1;
+export const SummaryItems = styled(FlexDivRowCentered)<{ attached?: boolean }>`
+	// display: grid;
+	// grid-auto-flow: column;
+	// flex-grow: 1;
+	background:#1E2D8E;
+	border-radius:16px;
+	padding:0.75rem 2.5rem;
 	${media.lessThan('md')`
 		grid-auto-flow: unset;
 		grid-template-columns: auto auto;
@@ -28,9 +31,10 @@ export const SummaryItems = styled.div<{ attached?: boolean }>`
 `;
 
 export const SummaryItem = styled.div`
-	display: grid;
-	grid-gap: 4px;
-	width: 110px;
+	// display: grid;
+	// grid-gap: 4px;
+	display: flex;
+	// width: 110px;
 	${media.lessThan('md')`
 		width: unset;
 	`}
@@ -38,6 +42,7 @@ export const SummaryItem = styled.div`
 
 export const SummaryItemLabel = styled.div`
 	text-transform: capitalize;
+	margin-right:10px;
 `;
 
 export const SummaryItemValue = styled.div`

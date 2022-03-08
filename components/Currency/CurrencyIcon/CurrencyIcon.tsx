@@ -25,7 +25,11 @@ export type CurrencyIconProps = {
 export const SNXIcon =
 	'https://raw.githubusercontent.com/Synthetixio/synthetix-assets/master/snx/SNX.svg';
 
-export const SCNIcon =require('../../../assets/svg/currencies/crypto/SCN2111.png');
+export const SCNIcon =require('../../../assets/png/dashboard/SCN.png');
+
+export const USDIcon =require('../../../assets/png/dashboard/sUSD.png');
+
+export const BTCIcon =require('../../../assets/png/dashboard/BTC.png');
 
 export const getSynthIcon = (currencyKey: CurrencyKey) =>
 	`https://raw.githubusercontent.com/Synthetixio/synthetix-assets/master/synths/${currencyKey}.svg`;
@@ -82,8 +86,17 @@ const CurrencyIcon: FC<CurrencyIconProps> = ({ currencyKey, type, isDeprecated, 
 			case CRYPTO_CURRENCY_MAP.DEM: {
 				return <img src={SNXIcon} {...props} alt="snx-icon" />;
 			}
-			case CRYPTO_CURRENCY_MAP.sCN2111: {
+			case CRYPTO_CURRENCY_MAP.sUSD: {
+				return <img src={USDIcon} {...props} alt="snx-icon" />;
+			}
+			case CRYPTO_CURRENCY_MAP.sETH: {
+				return <Img src={ETHIcon} {...props} />;
+			}
+			case CRYPTO_CURRENCY_MAP.sCN: {
 				return <img src={SCNIcon} {...props} alt="scn-icon"/>;
+			}
+			case CRYPTO_CURRENCY_MAP.sBTC: {
+				return <img src={BTCIcon} {...props} alt="scn-icon"/>;
 			}
 			default:
 				return (
@@ -131,11 +144,20 @@ const CurrencyIcon: FC<CurrencyIconProps> = ({ currencyKey, type, isDeprecated, 
 			case CRYPTO_CURRENCY_MAP.ETH: {
 				return <Img src={ETHIcon} {...props} />;
 			}
+			case CRYPTO_CURRENCY_MAP.sUSD: {
+				return <img src={USDIcon} {...props} alt="snx-icon" />;
+			}
+			case CRYPTO_CURRENCY_MAP.sETH: {
+				return <Img src={ETHIcon} {...props} />;
+			}
 			case CRYPTO_CURRENCY_MAP.DEM: {
 				return <img src={SNXIcon} {...props} alt="snx-icon" />;
 			}
 			case CRYPTO_CURRENCY_MAP.SCN: {
 				return <img src={SCNIcon} {...props} alt="scn-icon"/>;
+			}
+			case CRYPTO_CURRENCY_MAP.sBTC: {
+				return <img src={BTCIcon} {...props} alt="scn-icon"/>;
 			}
 			default:
 				return (

@@ -1,12 +1,12 @@
 import Head from 'next/head';
 import { useTranslation } from 'react-i18next';
-import styled from 'styled-components';
+import styled ,{ css }from 'styled-components';
 import Slider from 'react-slick';
 import Img,{ Svg } from 'react-optimized-image';
 import { AnimateSharedLayout, AnimatePresence, motion } from 'framer-motion';
 
 import ArrowsIcon from 'assets/svg/app/arrows.svg';
-import ConvertImg from 'assets/png/exchange/convert.png';
+import ConvertImg from 'assets/png/exchange/convertC.png';
 import SingleChartIcon from 'assets/svg/app/single-chart.svg';
 import DoubleChartIcon from 'assets/svg/app/double-chart.svg';
 import { zIndex } from 'constants/ui';
@@ -94,20 +94,19 @@ const ExchangePage = () => {
 				<StyledPageContent>
 					<DesktopOnlyView>
 						<DesktopContainer>
-							<SwapCurrenciesButtonContainer>
-								<SwapCurrenciesButton onClick={handleCurrencySwap} data-testid="swap-btn">
-									{/* <Svg src={ArrowsIcon} /> */}
-									<Img src={ConvertImg} className='convertImg'/>
-								</SwapCurrenciesButton>
-							</SwapCurrenciesButtonContainer>
-
 							<PageWidthContainer>
-								<DesktopCardsContainer>
-									<LeftCardContainer data-testid="left-side">{quoteCurrencyCard}</LeftCardContainer>
-									<RightCardContainer data-testid="right-side">
+								<DesktopCardsContainerCopy>
+									<LeftCardContainerC data-testid="left-side">{quoteCurrencyCard}</LeftCardContainerC>
+									<SwapCurrenciesButtonContainer isQuoteCurrencyKey={quoteCurrencyKey != null}>
+										<SwapCurrenciesButton onClick={handleCurrencySwap} data-testid="swap-btn">
+											{/* <Svg src={ArrowsIcon} /> */}
+											<Img src={ConvertImg} width="40" height="40"/>
+										</SwapCurrenciesButton>
+									</SwapCurrenciesButtonContainer>
+									<RightCardContainerC data-testid="right-side">
 										{baseCurrencyCard}
-									</RightCardContainer>
-								</DesktopCardsContainer>
+									</RightCardContainerC>
+								</DesktopCardsContainerCopy>
 								<PageWidthContainer className='footer-card-wrap'>{footerCard}</PageWidthContainer>
 							</PageWidthContainer>
 
@@ -298,6 +297,13 @@ const FooterContainer = styled.div`
 
 const DesktopContainer = styled(FlexDivCol)``;
 
+const DesktopCardsContainerCopy = styled.div`
+	display: flex;
+	align-items: center;
+    justify-content: space-between;
+	padding: 2px 4.5rem;
+	flex: 1;
+`;
 const DesktopCardsContainer = styled.div`
 	display: grid;
 	padding-bottom: 2px;
@@ -311,25 +317,36 @@ const DesktopCardsGapped = styled(DesktopCardsContainer)`
 	margin: 0 auto;
 `;
 
-const SwapCurrenciesButtonContainer = styled.div`
-	align-self: flex-start;
-	margin-top: 25px;
-	position: absolute;
-	left: calc(50% - 16px);
+const SwapCurrenciesButtonContainer = styled.div<{ isQuoteCurrencyKey: boolean }>`
+	align-self: flex-start; 
+	${(props) =>
+		props.isQuoteCurrencyKey &&
+		css`
+			margin-top: 25px;
+		`};
+	
+	// position: absolute;
+	// left: calc(50% - 16px);
 	z-index: ${zIndex.BASE + 10};
 	width: 76px;
 	height: 97px;
 	display: flex;
 	align-items: center;
     justify-content: center;
-	border-left:2px solid #000D56;
-	border-right:2px solid #000D56;
 `;
 
 const CardContainerMixin = `
 	display: grid;
 `;
 
+const LeftCardContainerC = styled.div`
+	width:45%;
+	${CardContainerMixin};
+`;
+const RightCardContainerC = styled.div`
+	width:45%;
+	${CardContainerMixin};
+`;
 const LeftCardContainer = styled.div`
 	${CardContainerMixin};
 `;

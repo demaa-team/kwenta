@@ -21,19 +21,29 @@ const ShortingCard: FC = () => {
 	return (
 		<Container>
 			<ConvertContainer>
-				<DesktopCardsGapped>
-					{quoteCurrencyCard}
-					{baseCurrencyCard}
+				<DesktopCardsContainerCopy>
+					<Left>
+						{quoteCurrencyCard}
+					</Left>
 					<StyledCurrencyCardsSelector>
 						<CRatioSelector />
 					</StyledCurrencyCardsSelector>
-				</DesktopCardsGapped>
+					<Right>
+						{baseCurrencyCard}
+					</Right>
+				</DesktopCardsContainerCopy>
 				<ExchangeFooter>{footerCard}</ExchangeFooter>
 			</ConvertContainer>
 		</Container>
 	);
 };
-
+const DesktopCardsContainerCopy = styled.div`
+	display: flex;
+	align-items: center;
+    justify-content: space-between;
+	padding: 1rem 4.5rem;
+	flex: 1;
+`;
 const Container = styled.div`
 	position: relative;
 	// margin-bottom: 30px;
@@ -49,7 +59,12 @@ const DesktopCardsContainer = styled.div`
 	grid-template-columns: 1fr 1fr;
 	flex: 1;
 `;
-
+const Left = styled.div`
+	width:45%;	
+`
+const Right = styled.div`
+	width:45%;	
+`
 const DesktopCardsGapped = styled(DesktopCardsContainer)`
 	grid-gap: 60px;
 	margin: 0 auto;
@@ -57,8 +72,9 @@ const DesktopCardsGapped = styled(DesktopCardsContainer)`
 const ConvertContainer = styled.div`
 padding:0 0 1rem 0`;
 
-const StyledCurrencyCardsSelector = styled(CurrencyCardsSelector)`
-	top:4rem;
+const StyledCurrencyCardsSelector = styled.div`
+	border-left: 2px solid ${(props) => props.theme.colors.black};
+	border-right: 2px solid ${(props) => props.theme.colors.black};
 	max-width: 260px;
 	width: 10%;
 	height: 5rem;

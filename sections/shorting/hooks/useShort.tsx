@@ -103,7 +103,6 @@ const useShort = ({
 		() => (customShortCRatio !== '' ? Number(customShortCRatio) / 100 : selectedShortCRatio),
 		[customShortCRatio, selectedShortCRatio]
 	);
-
 	const [gasLimit, setGasLimit] = useState<number | null>(null);
 
 	const synthsWalletBalancesQuery = useSynthsBalancesQuery(walletAddress);
@@ -490,6 +489,7 @@ const useShort = ({
 			currencyKey={quoteCurrencyKey}
 			amount={quoteCurrencyAmount}
 			onAmountChange={(value) => {
+				
 				if (value === '') {
 					setQuoteCurrencyAmount('');
 					setBaseCurrencyAmount('');
@@ -500,6 +500,7 @@ const useShort = ({
 			}}
 			walletBalance={quoteCurrencyBalance}
 			onBalanceClick={() => {
+				
 				if (quoteCurrencyBalance != null) {
 					setQuoteCurrencyAmount(quoteCurrencyBalance.toString());
 					setBaseCurrencyAmount(quoteCurrencyBalance.mul(rate).div(shortCRatio).toString());

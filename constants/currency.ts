@@ -40,7 +40,10 @@ export const CRYPTO_CURRENCY = [
 	'TRX',
 	'DASH',
 	'ETC',
-	'sCN2111'
+	'sCN',
+	'sUSD',
+	'sETH',
+	'sBTC'
 ];
 
 export const CRYPTO_CURRENCY_MAP = keyBy(CRYPTO_CURRENCY);

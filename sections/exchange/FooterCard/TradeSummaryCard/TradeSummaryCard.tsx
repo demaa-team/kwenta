@@ -114,7 +114,7 @@ const TradeSummaryCard: FC<TradeSummaryCardProps> = ({
 				{...rest}
 			>
 				{/* {show1InchProvider && <PoweredBy1Inch />} */}
-				<DesktopOnlyView>{summaryItems}</DesktopOnlyView>
+				<div style={{width:"100%",padding:"0 4.5rem",}}>{summaryItems}</div>
 				<ErrorTooltip
 					visible={feeReclaimPeriodInSeconds > 0}
 					placement="top"

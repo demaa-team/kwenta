@@ -75,7 +75,6 @@ const useConnector = () => {
 			});
 			const useOvm = getIsOVM(networkId);
 			const snxjs = synthetix({ provider, networkId, useOvm });
-
 			// @ts-ignore
 			setNetwork(snxjs.network, useOvm);
 			setSynthetixjs(snxjs);
@@ -171,7 +170,6 @@ const useConnector = () => {
 			if (onboard) {
 				onboard.walletReset();
 				const success = await onboard.walletSelect();
-				debugger
 				if (success) {
 					await onboard.walletCheck();
 					resetCachedUI();

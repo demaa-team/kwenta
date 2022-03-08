@@ -307,7 +307,6 @@ const useExchange = ({
 				: null,
 		[tokensMap, quoteCurrencyKey, createERC20Contract, needsApproval]
 	);
-
 	const exchangeFeeRate = exchangeFeeRateQuery.isSuccess ? exchangeFeeRateQuery.data ?? null : null;
 
 	const feeReclaimPeriodInSeconds = feeReclaimPeriodQuery.isSuccess

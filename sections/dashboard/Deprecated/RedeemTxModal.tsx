@@ -29,7 +29,6 @@ export const RedeemTxModal: FC<RedeemTxModalProps> = ({
 	totalUSDBalance,
 }) => {
 	const { t } = useTranslation();
-debugger
 	return (
 		<StyledBaseModal
 			onDismiss={onDismiss}

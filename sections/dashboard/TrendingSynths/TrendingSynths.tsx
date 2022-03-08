@@ -78,31 +78,31 @@ const TrendingSynths: FC = () => {
 		if (currentSynthSort.value === SynthSort.Price && exchangeRates != null) {
 			return unfrozenSynths.sort((a: Synth, b: Synth) =>
 				numericSort(exchangeRates, a.name, b.name)
-			);
+			).filter((v)=>!(v.name as String == 'iETH'||v.name as String == 'iBTC'));
 		}
 		if (currentSynthSort.value === SynthSort.Volume && historicalVolume != null) {
 			return unfrozenSynths.sort((a: Synth, b: Synth) =>
 				numericSort(historicalVolume, a.name, b.name)
-			);
+			).filter((v)=>!(v.name as String == 'iETH'||v.name as String == 'iBTC'));
 		}
 		if (historicalRates != null) {
 			if (currentSynthSort.value === SynthSort.Rates24HHigh) {
 				return unfrozenSynths.sort((a: Synth, b: Synth) =>
 					numericSort(mapValues(historicalRates, 'high'), a.name, b.name)
-				);
+				).filter((v)=>!(v.name as String == 'iETH'||v.name as String == 'iBTC'));
 			}
 			if (currentSynthSort.value === SynthSort.Rates24HLow) {
 				return unfrozenSynths.sort((a: Synth, b: Synth) =>
 					numericSort(mapValues(historicalRates, 'low'), a.name, b.name)
-				);
+				).filter((v)=>!(v.name as String == 'iETH'||v.name as String == 'iBTC'));
 			}
 			if (currentSynthSort.value === SynthSort.Change) {
 				return unfrozenSynths.sort((a: Synth, b: Synth) =>
 					numericSort(mapValues(historicalRates, 'change'), a.name, b.name)
-				);
+				).filter((v)=>!(v.name as String == 'iETH'||v.name as String == 'iBTC'));
 			}
 		}
-		return unfrozenSynths.filter((v)=>!(v.name as String == 'iETH'));
+		return unfrozenSynths.filter((v)=>!(v.name as String == 'iETH'||v.name as String == 'iBTC'));
 	}, [unfrozenSynths, currentSynthSort, exchangeRates, historicalVolume, historicalRates]);
 	return (
 		<>
